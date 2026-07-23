@@ -18,23 +18,21 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0">
 <title>医院经营日报 | 2026年7月19日</title>
+<script src="./echarts.min.js"></script>
 <script>
-(function(){
-  var urls = ['./echarts.min.js','https://cdn.staticfile.net/echarts/5.4.3/echarts.min.js','https://cdn.bootcdn.net/ajax/libs/echarts/5.4.3/echarts.min.js','https://cdnjs.cloudflare.com/ajax/libs/echarts/5.4.3/echarts.min.js'];
-  for(var i=0;i<urls.length;i++){
-    try{
-      var x=new XMLHttpRequest();
-      x.open('GET',urls[i],false);
-      x.send();
-      if(x.status===200||x.status===0){
-        eval(x.responseText);
-        if(typeof echarts!=='undefined'){console.log('echarts from: '+urls[i]);return;}
-      }
-    }catch(e){}
-  }
-  var els=document.querySelectorAll('.chart-box,.chart-box-sm,[class*="chart"]');
-  for(var j=0;j<els.length;j++) els[j].innerHTML='<div style="padding:30px;text-align:center;color:#e53935;font-size:14px">图表加载失败，请检查网络后刷新</div>';
-})();
+if(typeof echarts==='undefined'){document.write('<script src="https://cdn.staticfile.net/echarts/5.4.3/echarts.min.js"><\/script>')}
+</script>
+<script>
+if(typeof echarts==='undefined'){document.write('<script src="https://cdn.bootcdn.net/ajax/libs/echarts/5.4.3/echarts.min.js"><\/script>')}
+</script>
+<script>
+if(typeof echarts==='undefined'){document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.4.3/echarts.min.js"><\/script>')}
+</script>
+<script>
+if(typeof echarts==='undefined'){
+  var els=document.querySelectorAll('.chart-box,.chart-box-sm');
+  for(var i=0;i<els.length;i++) els[i].innerHTML='<div style="padding:30px;text-align:center;color:#e53935;font-size:14px">图表加载失败，请检查网络</div>';
+}
 </script>
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
