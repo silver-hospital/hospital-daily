@@ -288,7 +288,7 @@ deptChart.setOption({
     itemStyle: {
       borderRadius: [0, 4, 4, 0],
       color: function(p) {
-        var n=p.dataIndex,total=data.length;var ratio=total>1?n/(total-1):0;var r=Math.round(13+ratio*(174-13));var g=Math.round(71+ratio*(181-71));var b=Math.round(232+ratio*(248-232));
+        var _d=[1.23, 1.47, 1.78, 2.1, 2.21, 3.09, 3.88, 3.98, 6.41, 16.42],n=p.dataIndex,total=_d.length;var ratio=total>1?n/(total-1):0;var r=Math.round(13+ratio*(174-13));var g=Math.round(71+ratio*(181-71));var b=Math.round(232+ratio*(248-232));
         return 'rgb('+r+','+g+','+b+')';
       }
     },
