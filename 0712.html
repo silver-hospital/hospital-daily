@@ -131,8 +131,8 @@ tr:hover { background: #f8f9fa; }
 </div>
 
 <div class="card">
-  <h2>🏥 科室营收 TOP10（当日）</h2>
-  <div id="deptChart" class="chart-box"></div>
+  <h2>🏥 科室营收（全科室·当日）</h2>
+  <div id="deptChart" style="width:100%;height:976px"></div>
 </div>
 
 <div class="chart-row">
@@ -147,7 +147,7 @@ tr:hover { background: #f8f9fa; }
 </div>
 
 <div class="card">
-  <h2>科室营收明细 TOP10（本月累计）</h2>
+  <h2>科室营收明细（全科室·本月累计）</h2>
   <div class="scroll-hint">← 左右滑动查看完整表格 →</div>
   <div class="table-wrap">
     <table>
@@ -165,6 +165,28 @@ tr:hover { background: #f8f9fa; }
     <tr><td>8</td><td>中医康复二组</td><td><b>0.53</b></td><td>1.66%</td><td><b>18.41</b></td><td>3.46%</td><td>14.32%</td><td>检查为主(17.54%)</td></tr>
     <tr><td>9</td><td>肾内科</td><td><b>0.18</b></td><td>0.56%</td><td><b>18.11</b></td><td>3.41%</td><td>22.04%</td><td>收入结构均衡</td></tr>
     <tr><td>10</td><td>健康管理中心</td><td><b>1.42</b></td><td>4.45%</td><td><b>16.01</b></td><td>3.01%</td><td>0.0%</td><td>检查为主(40.41%)</td></tr>
+    <tr><td>11</td><td>重症医学科</td><td><b>1.24</b></td><td>3.88%</td><td><b>12.82</b></td><td>2.41%</td><td>37.86%</td><td>收入结构均衡</td></tr>
+    <tr><td>12</td><td>心内科</td><td><b>0.3</b></td><td>0.94%</td><td><b>12.57</b></td><td>2.37%</td><td>36.75%</td><td>检查为主(47.22%)</td></tr>
+    <tr><td>13</td><td>消化内科</td><td><b>0.53</b></td><td>1.66%</td><td><b>12.01</b></td><td>2.26%</td><td>22.83%</td><td>检查为主(32.06%)</td></tr>
+    <tr><td>14</td><td>肿瘤科</td><td><b>0.53</b></td><td>1.66%</td><td><b>10.86</b></td><td>2.04%</td><td>64.01%</td><td><span style='background:#fef7e0;color:#e37400;padding:2px 6px;border-radius:4px;font-size:11px'>当日药耗占比64.01%</span></td></tr>
+    <tr><td>15</td><td>老年病科</td><td><b>0.28</b></td><td>0.88%</td><td><b>5.76</b></td><td>1.08%</td><td>10.11%</td><td><span style='background:#e8f5e9;color:#2e7d32;padding:2px 6px;border-radius:4px;font-size:11px'>治疗收入为主，技术含量高</span></td></tr>
+    <tr><td>16</td><td>山大生殖专家门诊</td><td><b>0.25</b></td><td>0.78%</td><td><b>5.43</b></td><td>1.02%</td><td>0.09%</td><td>检查为主(10.57%)</td></tr>
+    <tr><td>17</td><td>神经外科</td><td><b>-0.02</b></td><td>-0.06%</td><td><b>5.38</b></td><td>1.01%</td><td>0%</td><td><span style='background:#e8f5e9;color:#2e7d32;padding:2px 6px;border-radius:4px;font-size:11px'>治疗收入为主，技术含量高</span></td></tr>
+    <tr><td>18</td><td>门诊部</td><td><b>0.31</b></td><td>0.97%</td><td><b>5.2</b></td><td>0.98%</td><td>100.0%</td><td><span style='background:#fef7e0;color:#e37400;padding:2px 6px;border-radius:4px;font-size:11px'>药耗占比100.0%，结构偏重</span></td></tr>
+    <tr><td>19</td><td>呼吸内科</td><td><b>0.34</b></td><td>1.06%</td><td><b>3.92</b></td><td>0.74%</td><td>30.36%</td><td>收入结构均衡</td></tr>
+    <tr><td>20</td><td>医学美容中心</td><td><b>0.16</b></td><td>0.5%</td><td><b>3.74</b></td><td>0.7%</td><td>25.65%</td><td>收入结构均衡</td></tr>
+    <tr><td>21</td><td>普外科</td><td><b>0.06</b></td><td>0.19%</td><td><b>2.78</b></td><td>0.52%</td><td>10.6%</td><td><span style='background:#e8f5e9;color:#2e7d32;padding:2px 6px;border-radius:4px;font-size:11px'>治疗收入为主，技术含量高</span></td></tr>
+    <tr><td>22</td><td>妇科</td><td><b>0.06</b></td><td>0.19%</td><td><b>2.77</b></td><td>0.52%</td><td>9.31%</td><td>收入结构均衡</td></tr>
+    <tr><td>23</td><td>胸外科</td><td><b>0.13</b></td><td>0.41%</td><td><b>2.69</b></td><td>0.51%</td><td>45.28%</td><td>收入结构均衡</td></tr>
+    <tr><td>24</td><td>内分泌科</td><td><b>0.21</b></td><td>0.66%</td><td><b>1.85</b></td><td>0.35%</td><td>63.58%</td><td><span style='background:#fef7e0;color:#e37400;padding:2px 6px;border-radius:4px;font-size:11px'>当日药耗占比63.58%</span></td></tr>
+    <tr><td>25</td><td>眼科</td><td><b>0.02</b></td><td>0.06%</td><td><b>1.81</b></td><td>0.34%</td><td>42.7%</td><td><span style='background:#e8f5e9;color:#2e7d32;padding:2px 6px;border-radius:4px;font-size:11px'>治疗收入为主，技术含量高</span></td></tr>
+    <tr><td>26</td><td>麻醉科</td><td><b>0.19</b></td><td>0.6%</td><td><b>1.64</b></td><td>0.31%</td><td>7.23%</td><td>收入结构均衡</td></tr>
+    <tr><td>27</td><td>皮肤科</td><td><b>0.1</b></td><td>0.31%</td><td><b>1.49</b></td><td>0.28%</td><td>59.87%</td><td><span style='background:#fef7e0;color:#e37400;padding:2px 6px;border-radius:4px;font-size:11px'>当日药耗占比59.87%</span></td></tr>
+    <tr><td>28</td><td>口腔科</td><td><b>0.13</b></td><td>0.41%</td><td><b>1.27</b></td><td>0.24%</td><td>3.12%</td><td><span style='background:#e8f5e9;color:#2e7d32;padding:2px 6px;border-radius:4px;font-size:11px'>治疗收入为主，技术含量高</span></td></tr>
+    <tr><td>29</td><td>耳鼻喉科</td><td><b>0.01</b></td><td>0.03%</td><td><b>0.88</b></td><td>0.17%</td><td>0.0%</td><td><span style='background:#e8f5e9;color:#2e7d32;padding:2px 6px;border-radius:4px;font-size:11px'>治疗收入为主，技术含量高</span></td></tr>
+    <tr><td>30</td><td>儿科</td><td><b>0.1</b></td><td>0.31%</td><td><b>0.79</b></td><td>0.15%</td><td>57.27%</td><td><span style='background:#fef7e0;color:#e37400;padding:2px 6px;border-radius:4px;font-size:11px'>当日药耗占比57.27%</span></td></tr>
+    <tr><td>31</td><td>产科</td><td><b>0.02</b></td><td>0.06%</td><td><b>0.36</b></td><td>0.07%</td><td>0.0%</td><td>检查为主(100.0%)</td></tr>
+    <tr><td>32</td><td>护理门诊</td><td><b>0.02</b></td><td>0.06%</td><td><b>0.07</b></td><td>0.01%</td><td>69.16%</td><td><span style='background:#fef7e0;color:#e37400;padding:2px 6px;border-radius:4px;font-size:11px'>当日药耗占比69.16%</span></td></tr>
       </tbody>
     </table>
   </div>
@@ -234,15 +256,15 @@ deptChart.setOption({
   tooltip: { trigger: 'axis', axisPointer: { type: 'shadow' } },
   grid: { left: isMobile() ? 80 : 100, right: isMobile() ? 50 : 40, bottom: 20, top: 10 },
   xAxis: { type: 'value', name: '万元', axisLabel: { formatter: '{value}', fontSize: isMobile() ? 10 : 11 } },
-  yAxis: { type: 'category', data: ["消化内科", "中医康复二组", "中医康复科", "重症医学科", "急诊科", "健康管理中心", "神经内科", "骨科", "神经肿瘤科", "腋臭项目"], axisLabel: { fontSize: isMobile() ? 10 : 12 } },
+  yAxis: { type: 'category', data: ["神经外科", "耳鼻喉科", "护理门诊", "产科", "眼科", "妇科", "普外科", "儿科", "皮肤科", "口腔科", "胸外科", "医学美容中心", "肾内科", "麻醉科", "内分泌科", "山大生殖专家门诊", "老年病科", "心内科", "门诊部", "泌尿外科", "呼吸内科", "肿瘤科", "消化内科", "中医康复二组", "中医康复科", "重症医学科", "急诊科", "健康管理中心", "神经内科", "骨科", "神经肿瘤科", "腋臭项目"], axisLabel: { fontSize: isMobile() ? 10 : 12 } },
   series: [{
     type: 'bar', barWidth: isMobile() ? 14 : 18,
-    data: [0.53, 0.53, 1.09, 1.24, 1.42, 1.42, 1.53, 2.37, 3.96, 14.14],
+    data: [-0.02, 0.01, 0.02, 0.02, 0.02, 0.06, 0.06, 0.1, 0.1, 0.13, 0.13, 0.16, 0.18, 0.19, 0.21, 0.25, 0.28, 0.3, 0.31, 0.31, 0.34, 0.53, 0.53, 0.53, 1.09, 1.24, 1.42, 1.42, 1.53, 2.37, 3.96, 14.14],
     itemStyle: {
       borderRadius: [0, 4, 4, 0],
       color: function(p) {
-        var colors = ['#0d47a1','#174ea6','#1967d2','#1a73e8','#1a73e8','#1a73e8','#4285f4','#669df6','#8ab4f8','#aecbfa'];
-        return colors[p.dataIndex] || '#1a73e8';
+        var n=p.dataIndex,total=data.length;var ratio=total>1?n/(total-1):0;var r=Math.round(13+ratio*(174-13));var g=Math.round(71+ratio*(181-71));var b=Math.round(232+ratio*(248-232));
+        return 'rgb('+r+','+g+','+b+')';
       }
     },
     label: { show: true, position: 'right', formatter: function(p) { return p.value + '万(' + (p.value / 31.93 * 100).toFixed(1) + '%)'; }, fontSize: isMobile() ? 9 : 11 }
