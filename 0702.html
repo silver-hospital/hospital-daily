@@ -131,8 +131,8 @@ tr:hover { background: #f8f9fa; }
 </div>
 
 <div class="card">
-  <h2>🏥 科室营收（全科室·当日）</h2>
-  <div id="deptChart" style="width:100%;height:1256px"></div>
+  <h2>🏥 科室营收 TOP10（当日）</h2>
+  <div id="deptChart" class="chart-box"></div>
 </div>
 
 <div class="chart-row">
@@ -266,10 +266,10 @@ deptChart.setOption({
   tooltip: { trigger: 'axis', axisPointer: { type: 'shadow' } },
   grid: { left: isMobile() ? 80 : 100, right: isMobile() ? 50 : 40, bottom: 20, top: 10 },
   xAxis: { type: 'value', name: '万元', axisLabel: { formatter: '{value}', fontSize: isMobile() ? 10 : 11 } },
-  yAxis: { type: 'category', data: ["产科", "病案室", "病理科", "超声科", "放射科（介入医学科）", "核医学科", "检验科", "手术室", "输血科", "药学部", "烧伤整形科", "护理门诊", "皮肤科", "医学美容中心", "口腔科", "耳鼻喉科", "麻醉科", "眼科", "儿科", "内分泌科", "妇科", "神经外科", "普外科", "呼吸内科", "门诊部", "胸外科", "山大生殖专家门诊", "心内科", "重症医学科", "消化内科", "肿瘤科", "老年病科", "健康管理中心", "肾内科", "泌尿外科", "中医康复二组", "神经内科", "骨科", "腋臭项目", "急诊科", "中医康复科", "神经肿瘤科"], axisLabel: { fontSize: isMobile() ? 10 : 12 } },
+  yAxis: { type: 'category', data: ["健康管理中心", "肾内科", "泌尿外科", "中医康复二组", "神经内科", "骨科", "腋臭项目", "急诊科", "中医康复科", "神经肿瘤科"], axisLabel: { fontSize: isMobile() ? 10 : 12 } },
   series: [{
     type: 'bar', barWidth: isMobile() ? 14 : 18,
-    data: [-0.01, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.01, 0.01, 0.02, 0.03, 0.04, 0.05, 0.06, 0.13, 0.13, 0.14, 0.15, 0.17, 0.17, 0.33, 0.37, 0.41, 0.46, 0.64, 0.65, 0.8, 0.81, 0.87, 0.93, 1.1, 1.24, 1.88, 2.01, 4.18, 4.18, 4.39, 4.52, 10.39],
+    data: [0.93, 1.1, 1.24, 1.88, 2.01, 4.18, 4.18, 4.39, 4.52, 10.39],
     itemStyle: {
       borderRadius: [0, 4, 4, 0],
       color: function(p) {
