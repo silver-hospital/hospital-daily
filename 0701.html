@@ -96,7 +96,7 @@ tr:hover { background: #f8f9fa; }
 <div class="breadcrumb"><a href="index.html">首页</a> &gt; <a href="index.html">2026年</a> &gt; <a href="07.html">7月</a> &gt; 7月1日</div>
 
 <div class="nav-row">
-  <a href="0630.html" class="nav-link">← 前一天</a>
+  <span class="nav-link disabled">已是第一天</span>
   <a href="0702.html" class="nav-link">后一天 →</a>
 </div>
 
@@ -257,7 +257,7 @@ jianguanChart.setOption({
   xAxis: { type: 'category', data: ["1"], axisLabel: { fontSize: isMobile() ? 10 : 11 } },
   yAxis: { type: 'value', name: '万元', axisLabel: { formatter: '{value}', fontSize: isMobile() ? 10 : 11 } },
   series: [
-    { name: '健管', type: 'bar', data: [1.13],
+    { name: '健管', type: 'bar', data: [0],
       itemStyle: { color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{ offset: 0, color: '#ce93d8' }, { offset: 1, color: '#9c27b0' }]), borderRadius: [4, 4, 0, 0] },
       barMaxWidth: 30,
       label: { show: !isMobile(), position: 'top', fontSize: 10, color: '#ce93d8', formatter: function(p) { return p.value.toFixed(2); } }
