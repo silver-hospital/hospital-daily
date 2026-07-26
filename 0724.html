@@ -124,33 +124,33 @@ tr:hover { background: #f8f9fa; }
 </div>
 
 <div class="card">
-  <h2>📈 营收趋势</h2>
+  <h2>一、营收趋势</h2>
   <div id="trendChart" class="chart-box"></div>
 </div>
 
 <div class="card">
-  <h2>🩺 健管中心营收趋势</h2>
+  <h2>二、健管中心营收趋势</h2>
   <div id="jianguanChart" class="chart-box" style="height:220px"></div>
 </div>
 
 <div class="card">
-  <h2>🏥 科室营收 TOP10（当日）</h2>
+  <h2>三、科室营收 TOP10（当日）</h2>
   <div id="deptChart" class="chart-box"></div>
 </div>
 
 <div class="chart-row">
   <div class="card">
-    <h2>💊 当月累计收入结构</h2>
+    <h2>四、当月累计收入结构</h2>
     <div id="structChart" class="chart-box-sm"></div>
   </div>
   <div class="card">
-    <h2>📊 月度达成进度</h2>
+    <h2>五、月度达成进度</h2>
     <div id="progressChart" class="chart-box-sm"></div>
   </div>
 </div>
 
 <div class="card">
-  <h2>科室营收明细（全科室·本月累计）</h2>
+  <h2>六、科室营收明细（全科室·本月累计）</h2>
   <div class="scroll-hint">← 左右滑动查看完整表格 →</div>
   <div class="table-wrap">
     <table>
@@ -169,7 +169,7 @@ tr:hover { background: #f8f9fa; }
     <tr><td>9</td><td>中医康复二组</td><td><b>1.32</b></td><td>2.98%</td><td><b>36.94</b></td><td>3.39%</td><td>4.6%</td><td><span style='background:#e8f5e9;color:#2e7d32;padding:2px 6px;border-radius:4px;font-size:11px'>治疗收入为主，技术含量高</span></td></tr>
     <tr><td>10</td><td>重症医学科</td><td><b>1.9</b></td><td>4.28%</td><td><b>36.26</b></td><td>3.32%</td><td>46.04%</td><td>收入结构均衡</td></tr>
     <tr><td>11</td><td>心内科</td><td><b>0.93</b></td><td>2.1%</td><td><b>30.71</b></td><td>2.81%</td><td>35.04%</td><td>检查为主(33.22%)</td></tr>
-    <tr><td>12</td><td>健康管理中心</td><td><b>0.74</b></td><td>1.67%</td><td><b>30.41</b></td><td>2.79%</td><td>0.0%</td><td>检查为主(85.59%)</td></tr>
+    <tr><td>12</td><td>健康管理中心</td><td><b>2.04</b></td><td>4.6%</td><td><b>30.41</b></td><td>2.79%</td><td>0.0%</td><td>收入结构均衡</td></tr>
     <tr><td>13</td><td>消化内科</td><td><b>2.25</b></td><td>5.07%</td><td><b>29.27</b></td><td>2.68%</td><td>13.94%</td><td>检查为主(26.94%)</td></tr>
     <tr><td>14</td><td>肿瘤科</td><td><b>0.22</b></td><td>0.5%</td><td><b>17.97</b></td><td>1.65%</td><td>27.56%</td><td><span style='background:#e8f5e9;color:#2e7d32;padding:2px 6px;border-radius:4px;font-size:11px'>治疗收入为主，技术含量高</span></td></tr>
     <tr><td>15</td><td>老年病科</td><td><b>0.47</b></td><td>1.06%</td><td><b>11.19</b></td><td>1.03%</td><td>37.51%</td><td><span style='background:#e8f5e9;color:#2e7d32;padding:2px 6px;border-radius:4px;font-size:11px'>治疗收入为主，技术含量高</span></td></tr>
@@ -206,7 +206,7 @@ tr:hover { background: #f8f9fa; }
 </div>
 
 <div class="card">
-  <h2>⚠️ 异常预警</h2>
+  <h2>七、异常预警</h2>
   <div class="alert-row">
     
     <div class="alert-item alert-yellow">
@@ -270,10 +270,10 @@ deptChart.setOption({
   tooltip: { trigger: 'axis', axisPointer: { type: 'shadow' } },
   grid: { left: isMobile() ? 80 : 100, right: isMobile() ? 50 : 40, bottom: 20, top: 10 },
   xAxis: { type: 'value', name: '万元', axisLabel: { formatter: '{value}', fontSize: isMobile() ? 10 : 11 } },
-  yAxis: { type: 'category', data: ["中医康复二组", "肾内科", "重症医学科", "神经内科", "消化内科", "急诊科", "中医康复科", "骨科", "神经肿瘤科", "腋臭项目"], axisLabel: { fontSize: isMobile() ? 10 : 12 } },
+  yAxis: { type: 'category', data: ["肾内科", "重症医学科", "健康管理中心", "神经内科", "消化内科", "急诊科", "中医康复科", "骨科", "神经肿瘤科", "腋臭项目"], axisLabel: { fontSize: isMobile() ? 10 : 12 } },
   series: [{
     type: 'bar', barWidth: isMobile() ? 14 : 18,
-    data: [1.32, 1.83, 1.9, 2.15, 2.25, 2.37, 3.62, 3.92, 5.99, 14.41],
+    data: [1.83, 1.9, 2.04, 2.15, 2.25, 2.37, 3.62, 3.92, 5.99, 14.41],
     itemStyle: {
       borderRadius: [0, 4, 4, 0],
       color: function(p) {
