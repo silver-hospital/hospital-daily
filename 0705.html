@@ -168,10 +168,10 @@ tr:hover { background: #f8f9fa; }
     <tr><td>8</td><td>中医康复二组</td><td><b>0.54</b></td><td>1.45%</td><td><b>7.51</b></td><td>3.73%</td><td>21.35%</td><td>收入结构均衡</td></tr>
     <tr><td>9</td><td>肾内科</td><td><b>0.32</b></td><td>0.86%</td><td><b>6.28</b></td><td>3.12%</td><td>26.12%</td><td>收入结构均衡</td></tr>
     <tr><td>10</td><td>心内科</td><td><b>0.09</b></td><td>0.24%</td><td><b>5.23</b></td><td>2.6%</td><td>55.19%</td><td><span style='background:#fef7e0;color:#e37400;padding:2px 6px;border-radius:4px;font-size:11px'>当日药耗占比55.19%</span></td></tr>
-    <tr><td>11</td><td>健康管理中心</td><td><b>0.68</b></td><td>1.83%</td><td><b>5.04</b></td><td>2.5%</td><td>0.0%</td><td>收入结构均衡</td></tr>
-    <tr><td>12</td><td>消化内科</td><td><b>0.46</b></td><td>1.24%</td><td><b>4.56</b></td><td>2.26%</td><td>22.76%</td><td>检查为主(52.57%)</td></tr>
-    <tr><td>13</td><td>神经外科</td><td><b>0.21</b></td><td>0.56%</td><td><b>4.5</b></td><td>2.23%</td><td>72.2%</td><td><span style='background:#fef7e0;color:#e37400;padding:2px 6px;border-radius:4px;font-size:11px'>当日药耗占比72.2%</span></td></tr>
-    <tr><td>14</td><td>肿瘤科</td><td><b>0.95</b></td><td>2.55%</td><td><b>4.2</b></td><td>2.08%</td><td>38.83%</td><td>收入结构均衡</td></tr>
+    <tr><td>11</td><td>消化内科</td><td><b>0.46</b></td><td>1.24%</td><td><b>4.56</b></td><td>2.26%</td><td>22.76%</td><td>检查为主(52.57%)</td></tr>
+    <tr><td>12</td><td>神经外科</td><td><b>0.21</b></td><td>0.56%</td><td><b>4.5</b></td><td>2.23%</td><td>72.2%</td><td><span style='background:#fef7e0;color:#e37400;padding:2px 6px;border-radius:4px;font-size:11px'>当日药耗占比72.2%</span></td></tr>
+    <tr><td>13</td><td>肿瘤科</td><td><b>0.95</b></td><td>2.55%</td><td><b>4.2</b></td><td>2.08%</td><td>38.83%</td><td>收入结构均衡</td></tr>
+    <tr><td>14</td><td>健康管理中心</td><td><b>0.68</b></td><td>1.83%</td><td><b>3.94</b></td><td>1.96%</td><td>0.0%</td><td>收入结构均衡</td></tr>
     <tr><td>15</td><td>重症医学科</td><td><b>0.82</b></td><td>2.2%</td><td><b>3.58</b></td><td>1.78%</td><td>44.02%</td><td>收入结构均衡</td></tr>
     <tr><td>16</td><td>老年病科</td><td><b>0.38</b></td><td>1.02%</td><td><b>3.23</b></td><td>1.6%</td><td>39.29%</td><td><span style='background:#e8f5e9;color:#2e7d32;padding:2px 6px;border-radius:4px;font-size:11px'>治疗收入为主，技术含量高</span></td></tr>
     <tr><td>17</td><td>山大生殖专家门诊</td><td><b>0.14</b></td><td>0.38%</td><td><b>2.07</b></td><td>1.03%</td><td>0.0%</td><td>检查为主(35.53%)</td></tr>
@@ -257,7 +257,7 @@ jianguanChart.setOption({
   xAxis: { type: 'category', data: ["1", "2", "3", "4", "5"], axisLabel: { fontSize: isMobile() ? 10 : 11 } },
   yAxis: { type: 'value', name: '万元', axisLabel: { formatter: '{value}', fontSize: isMobile() ? 10 : 11 } },
   series: [
-    { name: '健管', type: 'bar', data: [1.13, 0.93, 1.1, 1.2, 0.68],
+    { name: '健管', type: 'bar', data: [1.13, 0.93, 0.0, 1.2, 0.68],
       itemStyle: { color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{ offset: 0, color: '#ce93d8' }, { offset: 1, color: '#9c27b0' }]), borderRadius: [4, 4, 0, 0] },
       barMaxWidth: 30,
       label: { show: !isMobile(), position: 'top', fontSize: 10, color: '#ce93d8', formatter: function(p) { return p.value.toFixed(2); } }

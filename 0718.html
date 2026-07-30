@@ -167,7 +167,7 @@ tr:hover { background: #f8f9fa; }
     <tr><td>7</td><td>泌尿外科</td><td><b>1.25</b></td><td>1.68%</td><td><b>35.28</b></td><td>4.16%</td><td>33.69%</td><td><span style='background:#e8f5e9;color:#2e7d32;padding:2px 6px;border-radius:4px;font-size:11px'>治疗收入为主，技术含量高</span></td></tr>
     <tr><td>8</td><td>肾内科</td><td><b>1.43</b></td><td>1.92%</td><td><b>29.48</b></td><td>3.48%</td><td>26.26%</td><td><span style='background:#e8f5e9;color:#2e7d32;padding:2px 6px;border-radius:4px;font-size:11px'>治疗收入为主，技术含量高</span></td></tr>
     <tr><td>9</td><td>中医康复二组</td><td><b>1.69</b></td><td>2.27%</td><td><b>28.63</b></td><td>3.38%</td><td>6.31%</td><td><span style='background:#e8f5e9;color:#2e7d32;padding:2px 6px;border-radius:4px;font-size:11px'>治疗收入为主，技术含量高</span></td></tr>
-    <tr><td>10</td><td>健康管理中心</td><td><b>2.35</b></td><td>3.16%</td><td><b>26.85</b></td><td>3.17%</td><td>0.0%</td><td>收入结构均衡</td></tr>
+    <tr><td>10</td><td>健康管理中心</td><td><b>2.35</b></td><td>3.16%</td><td><b>25.75</b></td><td>3.04%</td><td>0.0%</td><td>收入结构均衡</td></tr>
     <tr><td>11</td><td>心内科</td><td><b>0.3</b></td><td>0.4%</td><td><b>24.66</b></td><td>2.91%</td><td>57.36%</td><td><span style='background:#fef7e0;color:#e37400;padding:2px 6px;border-radius:4px;font-size:11px'>当日药耗占比57.36%</span></td></tr>
     <tr><td>12</td><td>重症医学科</td><td><b>2.34</b></td><td>3.15%</td><td><b>23.58</b></td><td>2.78%</td><td>50.24%</td><td><span style='background:#fef7e0;color:#e37400;padding:2px 6px;border-radius:4px;font-size:11px'>当日药耗占比50.24%</span></td></tr>
     <tr><td>13</td><td>消化内科</td><td><b>0.79</b></td><td>1.06%</td><td><b>19.79</b></td><td>2.33%</td><td>21.93%</td><td>检查为主(33.78%)</td></tr>
@@ -257,7 +257,7 @@ jianguanChart.setOption({
   xAxis: { type: 'category', data: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18"], axisLabel: { fontSize: isMobile() ? 10 : 11 } },
   yAxis: { type: 'value', name: '万元', axisLabel: { formatter: '{value}', fontSize: isMobile() ? 10 : 11 } },
   series: [
-    { name: '健管', type: 'bar', data: [1.13, 0.93, 1.1, 1.2, 0.68, 0.31, 1.64, 2.1, 1.58, 2.08, 1.84, 1.42, 0.06, 2.07, 1.69, 2.43, 2.24, 2.35],
+    { name: '健管', type: 'bar', data: [1.13, 0.93, 0.0, 1.2, 0.68, 0.31, 1.64, 2.1, 1.58, 2.08, 1.84, 1.42, 0.06, 2.07, 1.69, 2.43, 2.24, 2.35],
       itemStyle: { color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{ offset: 0, color: '#ce93d8' }, { offset: 1, color: '#9c27b0' }]), borderRadius: [4, 4, 0, 0] },
       barMaxWidth: 30,
       label: { show: !isMobile(), position: 'top', fontSize: 10, color: '#ce93d8', formatter: function(p) { return p.value.toFixed(2); } }
