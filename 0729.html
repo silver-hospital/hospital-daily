@@ -97,7 +97,7 @@ tr:hover { background: #f8f9fa; }
 
 <div class="nav-row">
   <a href="0728.html" class="nav-link">← 前一天</a>
-  <span class="nav-link disabled">已是最后一天</span>
+  <a href="0730.html" class="nav-link">后一天 →</a>
 </div>
 
 <div class="kpi-row">
@@ -167,8 +167,8 @@ tr:hover { background: #f8f9fa; }
     <tr><td>7</td><td>急诊科</td><td><b>1.64</b></td><td>4.12%</td><td><b>61.66</b></td><td>4.47%</td><td>11.41%</td><td>检查为主(53.35%)</td></tr>
     <tr><td>8</td><td>泌尿外科</td><td><b>0.51</b></td><td>1.28%</td><td><b>57.61</b></td><td>4.17%</td><td>44.17%</td><td>检查为主(6.71%)</td></tr>
     <tr><td>9</td><td>肾内科</td><td><b>1.88</b></td><td>4.72%</td><td><b>44.55</b></td><td>3.23%</td><td>30.1%</td><td><span style='background:#e8f5e9;color:#2e7d32;padding:2px 6px;border-radius:4px;font-size:11px'>治疗收入为主，技术含量高</span></td></tr>
-    <tr><td>10</td><td>中医康复二组</td><td><b>1.5</b></td><td>3.77%</td><td><b>43.54</b></td><td>3.15%</td><td>6.15%</td><td><span style='background:#e8f5e9;color:#2e7d32;padding:2px 6px;border-radius:4px;font-size:11px'>治疗收入为主，技术含量高</span></td></tr>
-    <tr><td>11</td><td>健康管理中心</td><td><b>1.41</b></td><td>3.54%</td><td><b>43.37</b></td><td>3.14%</td><td>0.0%</td><td>收入结构均衡</td></tr>
+    <tr><td>10</td><td>健康管理中心</td><td><b>1.41</b></td><td>3.54%</td><td><b>44.47</b></td><td>3.22%</td><td>0.0%</td><td>收入结构均衡</td></tr>
+    <tr><td>11</td><td>中医康复二组</td><td><b>1.5</b></td><td>3.77%</td><td><b>43.54</b></td><td>3.15%</td><td>6.15%</td><td><span style='background:#e8f5e9;color:#2e7d32;padding:2px 6px;border-radius:4px;font-size:11px'>治疗收入为主，技术含量高</span></td></tr>
     <tr><td>12</td><td>重症医学科</td><td><b>1.37</b></td><td>3.44%</td><td><b>41.57</b></td><td>3.01%</td><td>35.86%</td><td>收入结构均衡</td></tr>
     <tr><td>13</td><td>心内科</td><td><b>1.19</b></td><td>2.99%</td><td><b>35.31</b></td><td>2.56%</td><td>30.29%</td><td>检查为主(50.6%)</td></tr>
     <tr><td>14</td><td>消化内科</td><td><b>1.49</b></td><td>3.74%</td><td><b>34.44</b></td><td>2.5%</td><td>18.07%</td><td>检查为主(30.32%)</td></tr>
@@ -257,7 +257,7 @@ jianguanChart.setOption({
   xAxis: { type: 'category', data: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29"], axisLabel: { fontSize: isMobile() ? 10 : 11 } },
   yAxis: { type: 'value', name: '万元', axisLabel: { formatter: '{value}', fontSize: isMobile() ? 10 : 11 } },
   series: [
-    { name: '健管', type: 'bar', data: [1.13, 0.93, 0.0, 1.2, 0.68, 0.31, 1.64, 2.1, 1.58, 2.08, 1.84, 1.42, 0.06, 2.07, 1.69, 2.43, 2.24, 2.35, 0.77, 0.08, 2.24, 2.47, 2.11, 2.04, 2.1, 1.27, 0.19, 2.94, 1.41],
+    { name: '健管', type: 'bar', data: [1.13, 0.93, 1.1, 1.2, 0.68, 0.31, 1.64, 2.1, 1.58, 2.08, 1.84, 1.42, 0.06, 2.07, 1.69, 2.43, 2.24, 2.35, 0.77, 0.08, 2.24, 2.47, 2.11, 2.04, 2.1, 1.27, 0.19, 2.94, 1.41],
       itemStyle: { color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{ offset: 0, color: '#ce93d8' }, { offset: 1, color: '#9c27b0' }]), borderRadius: [4, 4, 0, 0] },
       barMaxWidth: 30,
       label: { show: !isMobile(), position: 'top', fontSize: 10, color: '#ce93d8', formatter: function(p) { return p.value.toFixed(2); } }

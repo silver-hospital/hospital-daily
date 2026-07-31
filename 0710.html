@@ -167,8 +167,8 @@ tr:hover { background: #f8f9fa; }
     <tr><td>7</td><td>泌尿外科</td><td><b>1.66</b></td><td>3.33%</td><td><b>18.01</b></td><td>4.0%</td><td>31.6%</td><td><span style='background:#e8f5e9;color:#2e7d32;padding:2px 6px;border-radius:4px;font-size:11px'>治疗收入为主，技术含量高</span></td></tr>
     <tr><td>8</td><td>肾内科</td><td><b>2.57</b></td><td>5.15%</td><td><b>16.47</b></td><td>3.65%</td><td>48.7%</td><td><span style='background:#e8f5e9;color:#2e7d32;padding:2px 6px;border-radius:4px;font-size:11px'>治疗收入为主，技术含量高</span></td></tr>
     <tr><td>9</td><td>中医康复二组</td><td><b>1.78</b></td><td>3.57%</td><td><b>16.22</b></td><td>3.6%</td><td>8.71%</td><td><span style='background:#e8f5e9;color:#2e7d32;padding:2px 6px;border-radius:4px;font-size:11px'>治疗收入为主，技术含量高</span></td></tr>
-    <tr><td>10</td><td>心内科</td><td><b>0.1</b></td><td>0.2%</td><td><b>12.07</b></td><td>2.68%</td><td>96.66%</td><td><span style='background:#fef7e0;color:#e37400;padding:2px 6px;border-radius:4px;font-size:11px'>药耗占比96.66%，结构偏重</span></td></tr>
-    <tr><td>11</td><td>健康管理中心</td><td><b>2.08</b></td><td>4.17%</td><td><b>11.65</b></td><td>2.58%</td><td>0.0%</td><td>收入结构均衡</td></tr>
+    <tr><td>10</td><td>健康管理中心</td><td><b>2.08</b></td><td>4.17%</td><td><b>12.75</b></td><td>2.83%</td><td>0.0%</td><td>收入结构均衡</td></tr>
+    <tr><td>11</td><td>心内科</td><td><b>0.1</b></td><td>0.2%</td><td><b>12.07</b></td><td>2.68%</td><td>96.66%</td><td><span style='background:#fef7e0;color:#e37400;padding:2px 6px;border-radius:4px;font-size:11px'>药耗占比96.66%，结构偏重</span></td></tr>
     <tr><td>12</td><td>消化内科</td><td><b>0.57</b></td><td>1.14%</td><td><b>11.21</b></td><td>2.49%</td><td>14.92%</td><td>检查为主(33.02%)</td></tr>
     <tr><td>13</td><td>重症医学科</td><td><b>1.63</b></td><td>3.27%</td><td><b>10.17</b></td><td>2.26%</td><td>42.85%</td><td>收入结构均衡</td></tr>
     <tr><td>14</td><td>肿瘤科</td><td><b>1.58</b></td><td>3.17%</td><td><b>9.07</b></td><td>2.01%</td><td>64.43%</td><td><span style='background:#fef7e0;color:#e37400;padding:2px 6px;border-radius:4px;font-size:11px'>当日药耗占比64.43%</span></td></tr>
@@ -257,7 +257,7 @@ jianguanChart.setOption({
   xAxis: { type: 'category', data: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"], axisLabel: { fontSize: isMobile() ? 10 : 11 } },
   yAxis: { type: 'value', name: '万元', axisLabel: { formatter: '{value}', fontSize: isMobile() ? 10 : 11 } },
   series: [
-    { name: '健管', type: 'bar', data: [1.13, 0.93, 0.0, 1.2, 0.68, 0.31, 1.64, 2.1, 1.58, 2.08],
+    { name: '健管', type: 'bar', data: [1.13, 0.93, 1.1, 1.2, 0.68, 0.31, 1.64, 2.1, 1.58, 2.08],
       itemStyle: { color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{ offset: 0, color: '#ce93d8' }, { offset: 1, color: '#9c27b0' }]), borderRadius: [4, 4, 0, 0] },
       barMaxWidth: 30,
       label: { show: !isMobile(), position: 'top', fontSize: 10, color: '#ce93d8', formatter: function(p) { return p.value.toFixed(2); } }
