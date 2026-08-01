@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>银丰医院 2026年7月 经营月报</title>
+<script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/echarts/5.4.3/echarts.min.js"></script>
+<style>
+:root { --primary:#1a73e8; --success:#34a853; --danger:#ea4335; --warning:#fbbc04; --bg:#f0f2f5; --card:#fff; --text:#1a1a2e; --text2:#5f6368; --border:#e8eaed; }
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--text);font-size:14px;line-height:1.6}
+.header{background:linear-gradient(135deg,#0d1b4a 0%,#1a73e8 100%);color:#fff;padding:36px 40px;position:sticky;top:0;z-index:100;box-shadow:0 4px 20px rgba(0,0,0,.2)}
+.header h1{font-size:28px;font-weight:800;letter-spacing:2px}
+.header .sub{font-size:13px;opacity:.8;margin-top:6px}
+.container{max-width:1400px;margin:0 auto;padding:24px}
+.section{margin-bottom:36px}
+.section-title{font-size:20px;font-weight:700;color:var(--primary);margin-bottom:18px;padding-left:14px;border-left:4px solid var(--primary);display:flex;align-items:center;gap:8px}
+.card{background:var(--card);border-radius:14px;padding:24px;box-shadow:0 2px 8px rgba(0,0,0,.06);margin-bottom:16px}
+.kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-bottom:16px}
+.kpi-card{background:var(--card);border-radius:14px;padding:20px 22px;box-shadow:0 2px 8px rgba(0,0,0,.06);text-align:center;position:relative;overflow:hidden;transition:transform .2s}
+.kpi-card:hover{transform:translateY(-2px)}
+.kpi-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px}
+.kpi-card.blue::before{background:var(--primary)}
+.kpi-card.green::before{background:var(--success)}
+.kpi-card.red::before{background:var(--danger)}
+.kpi-card.yellow::before{background:var(--warning)}
+.kpi-card.purple::before{background:#7c3aed}
+.kpi-label{font-size:12px;color:var(--text2);margin-bottom:6px;font-weight:500}
+.kpi-value{font-size:30px;font-weight:800;line-height:1.2}
+.kpi-value.blue{color:var(--primary)}
+.kpi-value.green{color:var(--success)}
+.kpi-value.red{color:var(--danger)}
+.kpi-value.yellow{color:#e37400}
+.kpi-value.purple{color:#7c3aed}
+.kpi-sub{font-size:11px;color:var(--text2);margin-top:4px}
+.arrow-up{color:var(--success);font-weight:600}
+.arrow-down{color:var(--danger);font-weight:600}
+.chart-container{width:100%;height:400px;margin:8px 0}
+.chart-container-sm{width:100%;height:340px;margin:8px 0}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{background:#f1f3f4;padding:10px 12px;text-align:left;font-weight:600;color:var(--text2);border-bottom:2px solid var(--border);white-space:nowrap}
+td{padding:8px 12px;border-bottom:1px solid var(--border)}
+tr:hover td{background:#f8f9ff}
+.badge{display:inline-block;padding:2px 8px;border-radius:10px;font-size:12px;font-weight:600}
+.badge-up{background:#e6f4ea;color:var(--success)}
+.badge-down{background:#fce8e6;color:var(--danger)}
+.badge-warn-red{background:#fce8e6;color:var(--danger);padding:4px 10px;border-radius:8px;font-size:12px;font-weight:600}
+.badge-warn-orange{background:#fff3e0;color:#e65100;padding:4px 10px;border-radius:8px;font-size:12px;font-weight:600}
+.badge-warn-yellow{background:#fffde7;color:#f57f17;padding:4px 10px;border-radius:8px;font-size:12px;font-weight:600}
+.insight-box{background:#e8f0fe;border-left:4px solid var(--primary);padding:16px 20px;border-radius:0 10px 10px 0;margin-bottom:12px}
+.insight-box p{margin-bottom:8px;line-height:1.8}
+.insight-box p:last-child{margin-bottom:0}
+.warn-box{background:#fff8e1;border-left:4px solid #ff8f00;padding:16px 20px;border-radius:0 10px 10px 0;margin-bottom:12px}
+.success-box{background:#e8f5e9;border-left:4px solid var(--success);padding:16px 20px;border-radius:0 10px 10px 0;margin-bottom:12px}
+.unit-list{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.unit-tag{background:#e8f0fe;color:var(--primary);padding:6px 14px;border-radius:20px;font-size:13px;font-weight:500}
+.footer{text-align:center;padding:28px;color:var(--text2);font-size:12px;border-top:1px solid var(--border);margin-top:36px}
+.data-note{font-size:11px;color:#999;margin-top:8px;font-style:italic}
+@media print{.header{position:static}.card{box-shadow:none;border:1px solid #ddd;break-inside:avoid}body{font-size:12px}}
+@media(max-width:768px){.grid-2,.grid-3{grid-template-columns:1fr}.kpi-grid{grid-template-columns:repeat(2,1fr)}.kpi-value{font-size:22px}.container{padding:12px}}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>🏥 银丰医院 2026年7月 经营月报</h1>
+  <div class="sub">报告周期：2026年7月1日 — 7月31日（31天） ｜ 数据来源：HIS + WPS健管中心 ｜ 生成时间：2026-08-01</div>
+</div>
+
+<div class="container">
+
+<!-- ========== 一、经营概览 ========== -->
+<div class="section">
+  <div class="section-title">📊 一、经营概览</div>
+  <div class="kpi-grid">
+    <div class="kpi-card blue">
+      <div class="kpi-label">月度总营收</div>
+      <div class="kpi-value blue">1,449.06<span style="font-size:14px"> 万元</span></div>
+      <div class="kpi-sub">HIS 1,402.14万 + 健管 46.92万</div>
+    </div>
+    <div class="kpi-card green">
+      <div class="kpi-label">目标完成率</div>
+      <div class="kpi-value green">111.5%</div>
+      <div class="kpi-sub"><span class="arrow-up">↑ 超额 150.06 万元</span></div>
+    </div>
+    <div class="kpi-card yellow">
+      <div class="kpi-label">日均营收</div>
+      <div class="kpi-value yellow">46.74<span style="font-size:14px"> 万元</span></div>
+      <div class="kpi-sub">日均目标 41.94万 · 达成率 111.4%</div>
+    </div>
+    <div class="kpi-card green">
+      <div class="kpi-label">环比6月</div>
+      <div class="kpi-value green">+34.3%</div>
+      <div class="kpi-sub">6月 1,078.70万 → 7月 1,449.06万</div>
+    </div>
+  </div>
+  <div class="kpi-grid">
+    <div class="kpi-card blue">
+      <div class="kpi-label">门诊人次</div>
+      <div class="kpi-value blue">9,530</div>
+      <div class="kpi-sub">日均 307 人次</div>
+    </div>
+    <div class="kpi-card purple">
+      <div class="kpi-label">住院人次</div>
+      <div class="kpi-value purple">6,880</div>
+      <div class="kpi-sub">日均 222 人次</div>
+    </div>
+    <div class="kpi-card yellow">
+      <div class="kpi-label">出院人次</div>
+      <div class="kpi-value yellow">596</div>
+      <div class="kpi-sub">日均 19 人次</div>
+    </div>
+    <div class="kpi-card green">
+      <div class="kpi-label">手术台次</div>
+      <div class="kpi-value green">98</div>
+      <div class="kpi-sub">日均 3.2 台次</div>
+    </div>
+  </div>
+</div>
+
+<!-- ========== 二、日度营收走势 ========== -->
+<div class="section">
+  <div class="section-title">📈 二、日度营收走势</div>
+  <div class="card">
+    <div id="chart_daily_rev" class="chart-container"></div>
+    <div class="data-note">* 日度营收 = HIS科室(不含健管) + WPS健管中心当日营收</div>
+  </div>
+  <div class="card">
+    <h3 style="margin-bottom:12px;color:var(--text2)">⚠️ 低于日均目标（41.94万）天数：12天（占38.7%）</h3>
+    <div style="display:flex;flex-wrap:wrap;gap:6px">
+      <span class="badge-warn-red">7/02 周四 41.25万</span>
+      <span class="badge-warn-red">7/03 周五 37.92万</span>
+      <span class="badge-warn-red">7/04 周六 38.07万</span>
+      <span class="badge-warn-red">7/05 周日 36.42万</span>
+      <span class="badge-warn-red">7/12 周日 31.93万</span>
+      <span class="badge-warn-red">7/15 周三 38.49万</span>
+      <span class="badge-warn-red">7/19 周日 34.12万</span>
+      <span class="badge-warn-red">7/20 周一 38.62万</span>
+      <span class="badge-warn-red">7/23 周四 37.05万</span>
+      <span class="badge-warn-red">7/29 周三 39.84万</span>
+      <span class="badge-warn-red">7/30 周四 35.01万</span>
+      <span class="badge-warn-red">7/31 周五 37.14万</span>
+    </div>
+  </div>
+</div>
+
+<!-- ========== 三、收入结构分析 ========== -->
+<div class="section">
+  <div class="section-title">🧩 三、收入结构分析</div>
+  <div class="kpi-grid" style="grid-template-columns:repeat(4,1fr)">
+    <div class="kpi-card blue">
+      <div class="kpi-label">药占比</div>
+      <div class="kpi-value blue">22.1%</div>
+      <div class="kpi-sub">6月 26.2% · <span class="arrow-up">↓4.1pp ✅</span></div>
+    </div>
+    <div class="kpi-card yellow">
+      <div class="kpi-label">耗占比</div>
+      <div class="kpi-value yellow">24.1%</div>
+      <div class="kpi-sub">6月 23.7% · <span class="arrow-up">↑0.4pp</span></div>
+    </div>
+    <div class="kpi-card green">
+      <div class="kpi-label">检查占比</div>
+      <div class="kpi-value green">9.8%</div>
+      <div class="kpi-sub">6月 12.2% · <span class="arrow-up">↓2.4pp ✅</span></div>
+    </div>
+    <div class="kpi-card purple">
+      <div class="kpi-label">治疗占比</div>
+      <div class="kpi-value purple">17.9%</div>
+      <div class="kpi-sub">6月 19.5% · <span class="arrow-up">↓1.6pp</span></div>
+    </div>
+  </div>
+  <div class="grid-2">
+    <div class="card">
+      <h3 style="margin-bottom:12px;color:var(--text2)">7月收入结构分布</h3>
+      <div id="chart_struct_pie" class="chart-container-sm"></div>
+    </div>
+    <div class="card">
+      <h3 style="margin-bottom:12px;color:var(--text2)">6月 vs 7月 收入结构对比（万元）</h3>
+      <div id="chart_struct_compare" class="chart-container-sm"></div>
+    </div>
+  </div>
+  <div class="data-note">* 收入结构基于HIS 41科室（不含健管中心）汇总，总基数1,402.14万元。"其他"含手术费、床位费、护理费等未单独列项收入。</div>
+</div>
+
+<!-- ========== 四、科室经营排行 ========== -->
+<div class="section">
+  <div class="section-title">🏆 四、科室经营排行</div>
+  <div class="card">
+    <h3 style="margin-bottom:12px;color:var(--text2)">TOP 15 科室营收排名（万元）</h3>
+    <div id="chart_dept_rank" style="width:100%;height:550px"></div>
+  </div>
+  <div class="card">
+    <h3 style="margin-bottom:12px;color:var(--text2)">科室明细（按营收降序，单位：万元）</h3>
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th>#</th><th>科室</th><th>7月营收</th><th>6月营收</th><th>环比</th><th>门诊</th><th>住院</th><th>出院</th><th>手术</th></tr></thead>
+      <tbody>
+<tr><td>1</td><td><b>腋臭项目</b></td><td>284.77</td><td>30.73</td><td><span class="badge badge-up">+826.7%</span></td><td>413</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>2</td><td><b>神经肿瘤科</b></td><td>227.98</td><td>343.60</td><td><span class="badge badge-down">-33.6%</span></td><td>189</td><td>581</td><td>126</td><td>2</td></tr>
+<tr><td>3</td><td><b>神经内科</b></td><td>134.00</td><td>50.51</td><td><span class="badge badge-up">+165.3%</span></td><td>327</td><td>1249</td><td>75</td><td>2</td></tr>
+<tr><td>4</td><td><b>中医康复科</b></td><td>116.59</td><td>100.23</td><td><span class="badge badge-up">+16.3%</span></td><td>664</td><td>1612</td><td>66</td><td>0</td></tr>
+<tr><td>5</td><td><b>骨科</b></td><td>106.55</td><td>94.78</td><td><span class="badge badge-up">+12.4%</span></td><td>139</td><td>940</td><td>88</td><td>21</td></tr>
+<tr><td>6</td><td><b>急诊科</b></td><td>65.06</td><td>60.43</td><td><span class="badge badge-up">+7.7%</span></td><td>830</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>7</td><td><b>神经外科</b></td><td>62.54</td><td>4.77</td><td><span class="badge badge-up">+1211.0%</span></td><td>0</td><td>45</td><td>9</td><td>2</td></tr>
+<tr><td>8</td><td><b>泌尿外科</b></td><td>61.49</td><td>48.41</td><td><span class="badge badge-up">+27.0%</span></td><td>123</td><td>124</td><td>46</td><td>64</td></tr>
+<tr><td>9</td><td><b>肾内科</b></td><td>47.43</td><td>45.54</td><td><span class="badge badge-up">+4.2%</span></td><td>643</td><td>212</td><td>14</td><td>1</td></tr>
+<tr><td>10</td><td><b>中医康复二组</b></td><td>46.33</td><td>40.95</td><td><span class="badge badge-up">+13.1%</span></td><td>91</td><td>889</td><td>31</td><td>0</td></tr>
+<tr><td>11</td><td>重症医学科</td><td>42.59</td><td>26.30</td><td><span class="badge badge-up">+61.9%</span></td><td>0</td><td>260</td><td>21</td><td>0</td></tr>
+<tr><td>12</td><td>心内科</td><td>40.13</td><td>31.32</td><td><span class="badge badge-up">+28.1%</span></td><td>248</td><td>117</td><td>21</td><td>0</td></tr>
+<tr><td>13</td><td>消化内科</td><td>36.24</td><td>29.15</td><td><span class="badge badge-up">+24.3%</span></td><td>312</td><td>121</td><td>27</td><td>0</td></tr>
+<tr><td>14</td><td>肿瘤科</td><td>21.09</td><td>13.86</td><td><span class="badge badge-up">+52.1%</span></td><td>93</td><td>241</td><td>18</td><td>1</td></tr>
+<tr><td>15</td><td>老年病科</td><td>13.91</td><td>17.32</td><td><span class="badge badge-down">-19.7%</span></td><td>479</td><td>124</td><td>10</td><td>0</td></tr>
+<tr><td>16</td><td>山大生殖专家门诊</td><td>13.85</td><td>12.10</td><td><span class="badge badge-up">+14.5%</span></td><td>575</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>17</td><td>门诊部</td><td>13.30</td><td>11.09</td><td><span class="badge badge-up">+19.9%</span></td><td>675</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>18</td><td>呼吸内科</td><td>12.83</td><td>6.13</td><td><span class="badge badge-up">+109.1%</span></td><td>122</td><td>162</td><td>13</td><td>0</td></tr>
+<tr><td>19</td><td>医学美容中心</td><td>11.97</td><td>8.58</td><td><span class="badge badge-up">+39.6%</span></td><td>237</td><td>0</td><td>0</td><td>2</td></tr>
+<tr><td>20</td><td>妇科</td><td>8.85</td><td>13.39</td><td><span class="badge badge-down">-33.9%</span></td><td>177</td><td>28</td><td>6</td><td>2</td></tr>
+<tr><td>21</td><td>内分泌科</td><td>5.18</td><td>6.12</td><td><span class="badge badge-down">-15.5%</span></td><td>132</td><td>41</td><td>4</td><td>0</td></tr>
+<tr><td>22</td><td>普外科</td><td>4.52</td><td>8.86</td><td><span class="badge badge-down">-49.0%</span></td><td>50</td><td>45</td><td>5</td><td>1</td></tr>
+<tr><td>23</td><td>皮肤科</td><td>3.97</td><td>3.90</td><td><span class="badge badge-up">+1.7%</span></td><td>230</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>24</td><td>麻醉科</td><td>3.97</td><td>4.78</td><td><span class="badge badge-down">-17.1%</span></td><td>68</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>25</td><td>眼科</td><td>3.90</td><td>5.35</td><td><span class="badge badge-down">-27.0%</span></td><td>211</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>26</td><td>儿科</td><td>3.54</td><td>7.07</td><td><span class="badge badge-down">-49.9%</span></td><td>311</td><td>28</td><td>6</td><td>0</td></tr>
+<tr><td>27</td><td>胸外科</td><td>3.48</td><td>6.04</td><td><span class="badge badge-down">-42.4%</span></td><td>6</td><td>61</td><td>10</td><td>0</td></tr>
+<tr><td>28</td><td>耳鼻喉科</td><td>2.20</td><td>1.89</td><td><span class="badge badge-up">+16.2%</span></td><td>118</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>29</td><td>口腔科</td><td>2.05</td><td>5.51</td><td><span class="badge badge-down">-62.8%</span></td><td>42</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>30</td><td>产科</td><td>1.55</td><td>1.03</td><td><span class="badge badge-up">+49.9%</span></td><td>83</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>31</td><td>护理门诊</td><td>0.19</td><td>0.23</td><td><span class="badge badge-down">-18.2%</span></td><td>34</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>32</td><td>烧伤整形科</td><td>0.07</td><td>0.01</td><td>—</td><td>20</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>33</td><td>病理科</td><td>0.02</td><td>0.02</td><td>+25.0%</td><td>1</td><td>0</td><td>0</td><td>0</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="data-note">* 另有药学部、输血科、手术室、检验科、核医学科、放射科（介入医学科）、超声科、病案室等8个科室7月营收为0，未列出。</div>
+  </div>
+  <div class="grid-2">
+    <div class="card">
+      <h3 style="margin-bottom:12px;color:var(--success)">📈 环比增幅 TOP 5（排除基数＜5万）</h3>
+      <table>
+        <thead><tr><th>科室</th><th>7月(万)</th><th>6月(万)</th><th>增幅</th></tr></thead>
+        <tbody>
+          <tr><td>神经内科</td><td>134.00</td><td>50.51</td><td><span class="badge badge-up">+165.3%</span></td></tr>
+          <tr><td>呼吸内科</td><td>12.83</td><td>6.13</td><td><span class="badge badge-up">+109.1%</span></td></tr>
+          <tr><td>重症医学科</td><td>42.59</td><td>26.30</td><td><span class="badge badge-up">+61.9%</span></td></tr>
+          <tr><td>肿瘤科</td><td>21.09</td><td>13.86</td><td><span class="badge badge-up">+52.1%</span></td></tr>
+          <tr><td>医学美容中心</td><td>11.97</td><td>8.58</td><td><span class="badge badge-up">+39.6%</span></td></tr>
+        </tbody>
+      </table>
+      <div class="data-note">* 腋臭项目(+826.7%)和神经外科(+1211%)因6月基数极低(＜5万)已排除</div>
+    </div>
+    <div class="card">
+      <h3 style="margin-bottom:12px;color:var(--danger)">📉 环比降幅 TOP 5</h3>
+      <table>
+        <thead><tr><th>科室</th><th>7月(万)</th><th>6月(万)</th><th>降幅</th></tr></thead>
+        <tbody>
+          <tr><td>口腔科</td><td>2.05</td><td>5.51</td><td><span class="badge badge-down">-62.8%</span></td></tr>
+          <tr><td>儿科</td><td>3.54</td><td>7.07</td><td><span class="badge badge-down">-49.9%</span></td></tr>
+          <tr><td>普外科</td><td>4.52</td><td>8.86</td><td><span class="badge badge-down">-49.0%</span></td></tr>
+          <tr><td>胸外科</td><td>3.48</td><td>6.04</td><td><span class="badge badge-down">-42.4%</span></td></tr>
+          <tr><td>妇科</td><td>8.85</td><td>13.39</td><td><span class="badge badge-down">-33.9%</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- ========== 五、健管中心运营分析 ========== -->
+<div class="section">
+  <div class="section-title">🩺 五、健管中心运营分析（重点）</div>
+  <div class="kpi-grid" style="grid-template-columns:repeat(4,1fr)">
+    <div class="kpi-card blue">
+      <div class="kpi-label">健管总营收</div>
+      <div class="kpi-value blue">46.92<span style="font-size:14px"> 万元</span></div>
+      <div class="kpi-sub">环比6月 38.69万 <span class="arrow-up">↑21.3%</span></div>
+    </div>
+    <div class="kpi-card green">
+      <div class="kpi-label">体检总人次</div>
+      <div class="kpi-value green">2,105</div>
+      <div class="kpi-sub">环比6月 1,390人 <span class="arrow-up">↑51.4%</span></div>
+    </div>
+    <div class="kpi-card yellow">
+      <div class="kpi-label">团检占比</div>
+      <div class="kpi-value yellow">63.5%</div>
+      <div class="kpi-sub">团检 1,336 / 自费 769</div>
+    </div>
+    <div class="kpi-card purple">
+      <div class="kpi-label">新建档客户</div>
+      <div class="kpi-value purple">1,989</div>
+      <div class="kpi-sub">复检 110 | 门诊转诊 22</div>
+    </div>
+  </div>
+  <div class="grid-2">
+    <div class="card">
+      <h3 style="margin-bottom:12px;color:var(--text2)">团检 vs 自费人数分布</h3>
+      <div id="chart_health_pie" class="chart-container-sm"></div>
+    </div>
+    <div class="card">
+      <h3 style="margin-bottom:12px;color:var(--text2)">健管中心日度营收与体检人次</h3>
+      <div id="chart_health_daily" class="chart-container-sm"></div>
+    </div>
+  </div>
+  <div class="grid-3">
+    <div class="kpi-card blue">
+      <div class="kpi-label">团检加项金额</div>
+      <div class="kpi-value blue">3.89<span style="font-size:14px"> 万元</span></div>
+    </div>
+    <div class="kpi-card green">
+      <div class="kpi-label">自费加项金额</div>
+      <div class="kpi-value green">3.45<span style="font-size:14px"> 万元</span></div>
+    </div>
+    <div class="kpi-card yellow">
+      <div class="kpi-label">业务部门转介</div>
+      <div class="kpi-value yellow">3.31<span style="font-size:14px"> 万元</span></div>
+      <div class="kpi-sub">62 人次</div>
+    </div>
+  </div>
+  <div class="card">
+    <h3 style="margin-bottom:12px;color:var(--primary)">🏢 本月新增团检接待单位</h3>
+    <div class="unit-list">
+      <span class="unit-tag">兰升（济南）国际贸易有限公司</span>
+      <span class="unit-tag">山东天泰环境科技有限公司</span>
+      <span class="unit-tag">银丰济南医院健康管理中心惠民体检</span>
+    </div>
+  </div>
+  <div class="card">
+    <h3 style="margin-bottom:12px;color:var(--primary)">📋 健管运营解读</h3>
+    <div class="insight-box">
+      <p><b>1. 营收与人次双增长：</b>7月健管总营收46.92万元，环比6月（38.69万元）增长21.3%；体检总人次2,105人，环比增长51.4%，增长势头良好。</p>
+      <p><b>2. 团检是核心驱动力：</b>团检1,336人次占比63.5%，团检加项收入3.89万元高于自费加项3.45万元，说明团检客户增值开发能力较好。本月新增3家团检单位，B端渠道持续拓展。</p>
+      <p><b>3. 复检转化率偏低：</b>新建档1,989人但复检仅110人，复检转化率仅5.5%。建议建立异常指标主动回访与复检提醒机制，目标提升至10%以上。</p>
+      <p><b>4. 业务部门贡献有限：</b>业务部门转介62人次、贡献3.31万元，占总营收7.0%，对外渠道有提升空间。</p>
+    </div>
+  </div>
+</div>
+
+<!-- ========== 六、趋势与预警 ========== -->
+<div class="section">
+  <div class="section-title">⚠️ 六、趋势与预警</div>
+  <div class="card">
+    <h3 style="margin-bottom:12px;color:var(--text2)">📊 关键拐点</h3>
+    <div class="grid-2">
+      <div class="success-box">
+        <b>📈 最高日</b><br>
+        7月26日（周日）<b style="font-size:18px;color:var(--success)">87.84万</b><br>
+        为日均的 188%，全月唯一超80万的天
+      </div>
+      <div class="warn-box">
+        <b>📉 最低日</b><br>
+        7月12日（周日）<b style="font-size:18px;color:var(--danger)">31.93万</b><br>
+        仅为日均的 68%，差距55.91万
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <h3 style="margin-bottom:12px;color:var(--danger)">🔴 科室营收预警（环比降幅 &gt;10%）</h3>
+    <table>
+      <thead><tr><th>预警等级</th><th>科室</th><th>7月营收</th><th>6月营收</th><th>降幅</th><th>减收(万)</th></tr></thead>
+      <tbody>
+        <tr><td><span class="badge-warn-red">🔴 重度</span></td><td><b>神经肿瘤科</b></td><td>227.98万</td><td>343.60万</td><td>-33.6%</td><td>-115.62</td></tr>
+        <tr><td><span class="badge-warn-red">🔴 重度</span></td><td><b>老年病科</b></td><td>13.91万</td><td>17.32万</td><td>-19.7%</td><td>-3.41</td></tr>
+        <tr><td><span class="badge-warn-orange">🟠 中度</span></td><td>妇科</td><td>8.85万</td><td>13.39万</td><td>-33.9%</td><td>-4.54</td></tr>
+        <tr><td><span class="badge-warn-orange">🟠 中度</span></td><td>眼科</td><td>3.90万</td><td>5.35万</td><td>-27.0%</td><td>-1.45</td></tr>
+        <tr><td><span class="badge-warn-yellow">🟡 轻度</span></td><td>麻醉科</td><td>3.97万</td><td>4.78万</td><td>-17.1%</td><td>-0.81</td></tr>
+        <tr><td><span class="badge-warn-yellow">🟡 轻度</span></td><td>内分泌科</td><td>5.18万</td><td>6.12万</td><td>-15.5%</td><td>-0.94</td></tr>
+      </tbody>
+    </table>
+    <div class="data-note">* 排除基数极小（6月＜1万）或营收极小的科室；神经肿瘤科虽降幅33.6%但绝对减收115.62万，为全月最大减收科室。</div>
+  </div>
+</div>
+
+<!-- ========== 七、总结与建议 ========== -->
+<div class="section">
+  <div class="section-title">💡 七、总结与建议</div>
+  <div class="card">
+    <h3 style="margin-bottom:12px;color:var(--primary)">🔍 核心洞察</h3>
+    <div class="insight-box">
+      <p><b>1. 月度目标超额完成：</b>7月总营收1,449.06万元，完成率111.5%，超目标150.06万元。环比6月（1,078.70万）增长34.3%，经营势头强劲。</p>
+      <p><b>2. 增长引擎明确：</b>腋臭项目（+254万增量）和神经内科（+83.5万增量）是本月最大增长贡献者；神经外科从6月的4.77万跃升至62.54万，新增产能释放显著。TOP10科室贡献超80%营收，头部效应明显。</p>
+      <p><b>3. 神经肿瘤科大幅下滑需重点关注：</b>环比下降33.6%，绝对减收115.62万元，是全月最大减收项。需评估是否存在病源流失、竞争加剧或季节性因素。</p>
+      <p><b>4. 收入结构持续优化：</b>药占比从26.2%降至22.1%（↓4.1pp），检查占比从12.2%降至9.8%（↓2.4pp），体现医疗服务价值提升，符合医改方向。</p>
+      <p><b>5. 日度波动显著：</b>38.7%的天数（12天）低于日均目标，多集中在周末和月末。最高日（87.84万）与最低日（31.93万）差距达55.91万，收入稳定性有待提升。</p>
+    </div>
+  </div>
+  <div class="card">
+    <h3 style="margin-bottom:12px;color:var(--success)">✅ 行动建议</h3>
+    <div class="insight-box" style="background:#e8f5e9;border-left-color:var(--success)">
+      <p><b>1. 【紧急】排查神经肿瘤科下滑原因：</b>减收115.62万，建议医务部联合科室分析住院人次变化（6月→7月住院从581→581持平，但营收下降，需评估病例结构和费用变化）。</p>
+      <p><b>2. 【重要】稳定周末营收：</b>12天不达标中有5天是周末，建议优化周末排班、推出周末专项诊疗套餐，缩小工作日-周末差距。</p>
+      <p><b>3. 【重要】健管中心提升复检转化：</b>当前复检率仅5.5%，建议建立异常指标主动回访机制，设置复检提醒系统，目标提升至10%以上。同时加强B端团检客户开发。</p>
+      <p><b>4. 【常规】关注下滑科室：</b>口腔科（-62.8%）、儿科（-49.9%）、普外科（-49.0%）、胸外科（-42.4%）、妇科（-33.9%）降幅较大，建议各科室提交月度经营分析说明。</p>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<div class="footer">
+  银丰医院经营月报 · 2026年7月 ｜ 数据截止：2026-07-31 ｜ 数据来源：HIS科室明细 + WPS健管中心 ｜ 由苏筱自动生成
+</div>
+
+<script>
+// ===== 日度营收走势 =====
+var chart1 = echarts.init(document.getElementById('chart_daily_rev'));
+chart1.setOption({
+  tooltip:{ trigger:'axis', formatter:function(p){return p[0].axisValue+'<br/>'+p[0].marker+p[0].seriesName+': '+p[0].value+'万';} },
+  legend:{ data:['日营收','日均目标线'], top:5 },
+  grid:{ left:60, right:30, top:50, bottom:40 },
+  xAxis:{ type:'category', data:(function(){var a=[];for(var i=1;i<=31;i++)a.push('7/'+String(i).padStart(2,'0'));return a;})(), axisLabel:{fontSize:11} },
+  yAxis:{ type:'value', name:'万元', axisLabel:{fontSize:12} },
+  series:[
+    {
+      name:'日营收', type:'line',
+      data:[45.90,41.25,37.92,38.07,36.42,53.81,54.72,48.41,42.14,50.48,48.62,31.93,51.87,53.77,38.49,49.73,49.34,72.91,34.12,38.62,42.16,45.38,37.05,45.66,46.66,87.84,63.69,50.11,39.84,35.01,37.14],
+      smooth:true, lineStyle:{width:2.5,color:'#1a73e8'},
+      itemStyle:{color:'#1a73e8'},
+      areaStyle:{color:{type:'linear',x:0,y:0,x2:0,y2:1,colorStops:[{offset:0,color:'rgba(26,115,232,0.25)'},{offset:1,color:'rgba(26,115,232,0.02)'}]}},
+      markPoint:{
+        data:[
+          {name:'最高',coord:['7/26',87.84],value:'87.84万',itemStyle:{color:'#34a853'}},
+          {name:'最低',coord:['7/12',31.93],value:'31.93万',itemStyle:{color:'#ea4335'}}
+        ],
+        label:{formatter:'{c}'}
+      }
+    },
+    {
+      name:'日均目标线', type:'line',
+      markLine:{silent:true,lineStyle:{type:'dashed',color:'#ea4335',width:1.5},data:[{yAxis:41.94,label:{formatter:'目标 41.94万',fontSize:12}}]},
+      data:[]
+    }
+  ]
+});
+
+// ===== 收入结构饼图 =====
+var chart2 = echarts.init(document.getElementById('chart_struct_pie'));
+chart2.setOption({
+  tooltip:{trigger:'item',formatter:'{b}: {c}万元 ({d}%)'},
+  legend:{orient:'vertical',right:10,top:'center',textStyle:{fontSize:12}},
+  series:[{
+    type:'pie', radius:['42%','72%'], center:['38%','50%'],
+    label:{formatter:'{b}\n{d}%',fontSize:11},
+    data:[
+      {value:309.55,name:'药品',itemStyle:{color:'#1a73e8'}},
+      {value:338.42,name:'耗材',itemStyle:{color:'#fbbc04'}},
+      {value:136.92,name:'检查',itemStyle:{color:'#34a853'}},
+      {value:250.53,name:'治疗',itemStyle:{color:'#ea4335'}},
+      {value:366.71,name:'其他',itemStyle:{color:'#9aa0a6'}}
+    ]
+  }]
+});
+
+// ===== 6月vs7月结构对比 =====
+var chart3 = echarts.init(document.getElementById('chart_struct_compare'));
+chart3.setOption({
+  tooltip:{trigger:'axis'},
+  legend:{data:['6月','7月'],top:5},
+  grid:{left:60,right:30,top:45,bottom:30},
+  xAxis:{type:'category',data:['药品','耗材','检查','治疗','其他']},
+  yAxis:{type:'value',name:'万元'},
+  series:[
+    {name:'6月',type:'bar',barGap:'10%',data:[272.46,246.31,127.01,203.23,191.00],itemStyle:{color:'#bdbdbd',borderRadius:[4,4,0,0]}},
+    {name:'7月',type:'bar',data:[309.55,338.42,136.92,250.53,366.71],itemStyle:{color:'#1a73e8',borderRadius:[4,4,0,0]}}
+  ]
+});
+
+// ===== 科室排名 =====
+var chart4 = echarts.init(document.getElementById('chart_dept_rank'));
+var deptNames=["老年病科","肿瘤科","消化内科","心内科","重症医学科","中医康复二组","肾内科","泌尿外科","神经外科","急诊科","骨科","中医康复科","神经内科","神经肿瘤科","腋臭项目"];
+var deptRevs=[13.91,21.09,36.24,40.13,42.59,46.33,47.43,61.49,62.54,65.06,106.55,116.59,134.00,227.98,284.77];
+var deptJun =[17.32,13.86,29.15,31.32,26.30,40.95,45.54,48.41,4.77,60.43,94.78,100.23,50.51,343.60,30.73];
+var deptColors=deptRevs.map(function(v,i){var jun=deptJun[i];return v>=jun?'#1a73e8':'#ea4335';});
+chart4.setOption({
+  tooltip:{trigger:'axis',axisPointer:{type:'shadow'},formatter:function(p){var i=p[0].dataIndex;return p[0].name+'<br/>7月: '+p[0].value+'万<br/>6月: '+deptJun[i]+'万';}},
+  legend:{data:['7月营收','6月营收'],top:5},
+  grid:{left:130,right:60,top:30,bottom:30},
+  xAxis:{type:'value',name:'万元',axisLabel:{fontSize:12}},
+  yAxis:{type:'category',data:deptNames,axisLabel:{fontSize:12,width:110,overflow:'truncate'}},
+  series:[
+    {name:'6月营收',type:'bar',data:deptJun,itemStyle:{color:'#e0e0e0',borderRadius:[0,4,4,0]},barGap:'20%'},
+    {name:'7月营收',type:'bar',data:deptRevs.map(function(v,i){return{value:v,itemStyle:{color:deptColors[i],borderRadius:[0,4,4,0]}};}),
+     label:{show:true,position:'right',formatter:function(p){var i=p.dataIndex;var jun=deptJun[i];var pct=((p.value-jun)/jun*100).toFixed(1);return p.value+'万 ('+((p.value>=jun)?'+':'')+pct+'%)';},fontSize:10}}
+  ]
+});
+
+// ===== 健管团检vs自费饼图 =====
+var chart5 = echarts.init(document.getElementById('chart_health_pie'));
+chart5.setOption({
+  tooltip:{trigger:'item',formatter:'{b}: {c}人 ({d}%)'},
+  legend:{orient:'vertical',right:20,top:'center'},
+  series:[{
+    type:'pie',radius:['42%','72%'],center:['38%','50%'],
+    label:{formatter:'{b}\n{c}人 ({d}%)',fontSize:12},
+    data:[
+      {value:1336,name:'团检',itemStyle:{color:'#1a73e8'}},
+      {value:769,name:'自费',itemStyle:{color:'#34a853'}}
+    ]
+  }]
+});
+
+// ===== 健管日度走势 =====
+var chart6 = echarts.init(document.getElementById('chart_health_daily'));
+chart6.setOption({
+  tooltip:{trigger:'axis'},
+  legend:{data:['营收(元)','体检人次'],top:5},
+  grid:{left:60,right:60,top:45,bottom:30},
+  xAxis:{type:'category',data:(function(){var a=[];for(var i=1;i<=31;i++)a.push(String(i).padStart(2,'0'));return a;})()},
+  yAxis:[
+    {type:'value',name:'元',position:'left'},
+    {type:'value',name:'人次',position:'right'}
+  ],
+  series:[
+    {name:'营收(元)',type:'bar',data:[11307.50,9279.70,10971.40,11995.20,6806.80,3103.60,16440.70,20969.50,15789.00,20797.70,18391.50,14244.40,584.40,20727.80,16909.28,24323.10,22351.40,23543.16,7653.80,775.00,22387.30,24704.50,21061.80,20429.60,21028.20,12667.20,1864.20,29351.93,14133.96,6911.80,17710.50],
+     itemStyle:{color:'rgba(26,115,232,0.6)',borderRadius:[3,3,0,0]}},
+    {name:'体检人次',type:'line',yAxisIndex:1,data:[36,47,38,51,46,9,55,100,78,112,101,64,3,94,68,101,94,97,32,3,97,86,97,76,107,49,11,108,87,41,117],
+     smooth:true,lineStyle:{color:'#34a853',width:2},itemStyle:{color:'#34a853'}}
+  ]
+});
+
+window.addEventListener('resize',function(){
+  [chart1,chart2,chart3,chart4,chart5,chart6].forEach(function(c){c.resize();});
+});
+</script>
+</body>
+</html>
