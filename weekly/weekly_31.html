@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>业务发展部周报 | 第31周（7/28-8/3）</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<style>
+:root {--primary:#1e40af;--primary-light:#dbeafe;--success:#15803d;--success-light:#dcfce7;--danger:#b91c1c;--danger-light:#fee2e2;--warning:#a16207;--warning-light:#fef9c3;--gray-50:#f9fafb;--gray-100:#f3f4f6;--gray-200:#e5e7eb;--gray-500:#6b7280;--gray-700:#374151;--gray-900:#111827;--radius:8px;--shadow:0 1px 3px rgba(0,0,0,0.08);}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;background:var(--gray-50);color:var(--gray-900);line-height:1.7;padding:20px;}
+.container{max-width:1100px;margin:0 auto;}
+.header{background:linear-gradient(135deg,#1e3a8a,#1e40af,#2563eb);color:#fff;padding:32px 40px;border-radius:12px;margin-bottom:24px;box-shadow:0 4px 20px rgba(30,64,175,.3);}
+.header h1{font-size:26px;font-weight:700;margin-bottom:8px;}
+.header .meta{font-size:15px;opacity:.85;}
+.header .summary{margin-top:16px;padding:14px 18px;background:rgba(255,255,255,.12);border-radius:8px;font-size:15px;line-height:1.8;}
+.kpi-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:24px;}
+.kpi{background:#fff;padding:24px;border-radius:12px;box-shadow:var(--shadow);text-align:center;}
+.kpi .label{font-size:14px;color:var(--gray-500);margin-bottom:8px;}
+.kpi .value{font-size:30px;font-weight:700;}
+.kpi .sub{font-size:13px;margin-top:6px;}
+.kpi .up{color:var(--success);}
+.kpi .down{color:var(--danger);}
+.kpi .neutral{color:var(--gray-500);}
+.card{background:#fff;border-radius:12px;box-shadow:var(--shadow);padding:24px;margin-bottom:20px;}
+.card h2{font-size:18px;font-weight:700;color:var(--primary);margin-bottom:16px;padding-bottom:8px;border-bottom:2px solid var(--primary-light);}
+.chart-box{position:relative;height:320px;margin:10px 0;}
+table{width:100%;border-collapse:collapse;font-size:14px;}
+th{background:var(--primary);color:#fff;padding:10px 12px;text-align:left;font-weight:600;}
+td{padding:9px 12px;border-bottom:1px solid var(--gray-200);}
+tr:hover td{background:var(--gray-50);}
+.tag{display:inline-block;padding:2px 8px;border-radius:4px;font-size:12px;font-weight:600;}
+.tag-green{background:var(--success-light);color:var(--success);}
+.tag-red{background:var(--danger-light);color:var(--danger);}
+.tag-yellow{background:var(--warning-light);color:var(--warning);}
+.tag-blue{background:var(--primary-light);color:var(--primary);}
+.item-list{list-style:none;padding:0;}
+.item-list li{padding:10px 0;border-bottom:1px solid var(--gray-100);font-size:14px;line-height:1.7;}
+.item-list li:last-child{border-bottom:none;}
+.item-list .item-title{font-weight:600;color:var(--primary);margin-bottom:4px;}
+.progress-bar{background:var(--gray-200);border-radius:4px;height:8px;margin-top:6px;overflow:hidden;}
+.progress-fill{height:100%;border-radius:4px;transition:width .3s;}
+.alert{padding:14px 18px;border-radius:8px;margin-bottom:16px;font-size:14px;line-height:1.7;}
+.alert-danger{background:var(--danger-light);border-left:4px solid var(--danger);color:var(--danger);}
+.alert-success{background:var(--success-light);border-left:4px solid var(--success);color:var(--success);}
+.alert-warning{background:var(--warning-light);border-left:4px solid var(--warning);color:var(--warning);}
+.footer{text-align:center;color:var(--gray-500);font-size:12px;padding:20px 0;}
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+<h1>📋 业务发展部周报 | 第31周</h1>
+<div class="meta">2026年7月28日（周一）— 8月2日（周六） | 生成时间：2026-08-03 08:49</div>
+<div class="summary">
+<b>本周营收 278.17 万</b>，环比上周 274.12 万（<span style="color:#4ade80">+1.5%</span>）。<br>
+7月全月完成 <b>1353.63 万</b>，目标 1300 万，完成率 <b>104.1%</b>，超额 53.63 万 ✅<br>
+8月开局2天累计 116.99 万，日均 58.49 万，高于日均目标 41.94 万。
+</div>
+</div>
+
+<!-- KPI Cards -->
+<div class="kpi-grid">
+<div class="kpi">
+<div class="label">本周营收</div>
+<div class="value" style="color:var(--primary)">278.2<span style="font-size:16px">万</span></div>
+<div class="sub up">环比 +1.5%</div>
+</div>
+<div class="kpi">
+<div class="label">周日均</div>
+<div class="value">46.4<span style="font-size:16px">万</span></div>
+<div class="sub up">目标 41.94万/天</div>
+</div>
+<div class="kpi">
+<div class="label">7月完成率</div>
+<div class="value" style="color:var(--success)">104.1%</div>
+<div class="sub up">超目标 53.6万</div>
+</div>
+<div class="kpi">
+<div class="label">8月进度</div>
+<div class="value">117.0<span style="font-size:16px">万</span></div>
+<div class="sub neutral">已过2天 / 31天</div>
+</div>
+</div>
+
+<!-- 每日营收趋势 -->
+<div class="card">
+<h2>📊 每日营收趋势</h2>
+<div class="chart-box"><canvas id="dailyChart"></canvas></div>
+</div>
+
+<!-- 上周重点事项进度 -->
+<div class="card">
+<h2>📌 上周重点事项进度</h2>
+<ul class="item-list">
+<li>
+<div class="item-title">一、团队建设</div>
+<ul style="margin-left:16px;font-size:13px;line-height:1.8;color:var(--gray-700);">
+<li>上周转出：李娜、王丽娟、董开吉、宋飞鸿、刘家硕（强制解约）</li>
+<li>计划转入：骨科专科运营（劳务合作）1人；肾内专科运营1人</li>
+</ul>
+</li>
+<li>
+<div class="item-title">二、放疗中心</div>
+<ul style="margin-left:16px;font-size:13px;line-height:1.8;color:var(--gray-700);">
+<li>成立机房装修专班；业务发展部（王歆）+ 综合保障部（王元欢），对方（庄回）具体对接</li>
+<li>规划施工周期约30-35天；方案预计8/8前初稿，8/15定稿后施工，9月底前完成</li>
+<li>已要求庄牵头成立肿瘤专科运营：1顾问+2业务配置，协助肿瘤科业务提前准备</li>
+<li>⚠️ 难点：B3涉及部分公区装修在合同外，可能涉及招标影响进度</li>
+<li>应对：尽可能打包压进10万预算装到合作方预算内</li>
+<li>进度：原计划12月开机、27年4月拿证 → 实际预计9月底完成装修</li>
+</ul>
+</li>
+<li>
+<div class="item-title">三、HDU</div>
+<ul style="margin-left:16px;font-size:13px;line-height:1.8;color:var(--gray-700);">
+<li>约本周二上午与李雨主任共同确认最终合作方案</li>
+</ul>
+</li>
+<li>
+<div class="item-title">四、ASD</div>
+<ul style="margin-left:16px;font-size:13px;line-height:1.8;color:var(--gray-700);">
+<li>已确定合约内容；发起事项审批</li>
+</ul>
+</li>
+<li>
+<div class="item-title">五、全民结算</div>
+<ul style="margin-left:16px;font-size:13px;line-height:1.8;color:var(--gray-700);">
+<li>协同运营人资，制定了全民结算的管理办法</li>
+</ul>
+</li>
+</ul>
+</div>
+
+<!-- 本周重点 -->
+<div class="card">
+<h2>🎯 本周重点</h2>
+<ul class="item-list">
+<li><div class="item-title">1. 协助腋臭科完成首次结款</div>理顺流程，确保结算机制跑通</li>
+<li><div class="item-title">2. 确定放疗机房装修方案</div>推动8/8初稿产出，跟进B3公区装修预算打包方案</li>
+<li><div class="item-title">3. 人员编制持续优化和考核方案优化</div>结合近期人员调整，完善考核体系</li>
+</ul>
+</div>
+
+<!-- TOP10 科室 -->
+<div class="card">
+<h2>🏥 上周科室营收 TOP10</h2>
+<div class="chart-box"><canvas id="deptChart"></canvas></div>
+<table style="margin-top:16px;">
+<tr><th>排名</th><th>科室</th><th>营收(万)</th><th>占比</th></tr>
+<tr><td>1</td><td>神经内科</td><td>57.82</td><td>20.8%</td></tr>
+<tr><td>2</td><td>腋臭项目</td><td>56.72</td><td>20.4%</td></tr>
+<tr><td>3</td><td>神经肿瘤科</td><td>31.99</td><td>11.5%</td></tr>
+<tr><td>4</td><td>中医康复科</td><td>26.55</td><td>9.5%</td></tr>
+<tr><td>5</td><td>骨科</td><td>12.95</td><td>4.7%</td></tr>
+<tr><td>6</td><td>泌尿外科</td><td>11.69</td><td>4.2%</td></tr>
+<tr><td>7</td><td>重症医学科</td><td>10.12</td><td>3.6%</td></tr>
+<tr><td>8</td><td>急诊科</td><td>9.20</td><td>3.3%</td></tr>
+<tr><td>9</td><td>中医康复二组</td><td>7.90</td><td>2.8%</td></tr>
+<tr><td>10</td><td>肾内科</td><td>7.88</td><td>2.8%</td></tr>
+</table>
+</div>
+
+<!-- 8月预测 -->
+<div class="card">
+<h2>🔮 8月营收预测（零DBS基准）</h2>
+<div class="alert alert-warning">
+<b>预测总营收：1230万 | 目标1300万 | 缺口 -70万</b><br>
+常规科室撑到1230万，DBS是达标关键变量。至少3台DBS手术才能稳过1300万目标。
+</div>
+<table>
+<tr><th>情景</th><th>DBS台数</th><th>预估营收</th><th>达标</th></tr>
+<tr><td>保守</td><td>0台</td><td>1230万</td><td><span class="tag tag-red">❌ -70万</span></td></tr>
+<tr><td>偏低</td><td>1台</td><td>1260万</td><td><span class="tag tag-red">❌ -40万</span></td></tr>
+<tr><td>中性</td><td>2台</td><td>1290万</td><td><span class="tag tag-yellow">❌ -10万</span></td></tr>
+<tr><td>乐观</td><td>3台</td><td>1343万</td><td><span class="tag tag-green">✅ +43万</span></td></tr>
+</table>
+</div>
+
+<div class="footer">业务发展部经营周报 · 第31周 · 自动生成于 2026-08-03</div>
+</div>
+
+<script>
+new Chart(document.getElementById('dailyChart'),{
+type:'bar',
+data:{
+labels:["07/28(周一)", "07/29(周二)", "07/30(周三)", "07/31(周四)", "08/01(周五)", "08/02(周六)"],
+datasets:[{
+label:'日营收(万)',
+data:[50.11, 39.84, 34.6, 36.63, 82.63, 34.35],
+backgroundColor:'rgba(30,64,175,0.7)',
+borderRadius:4
+},{
+label:'日均目标(41.94万)',
+data:Array(6).fill(41.94),
+type:'line',
+borderColor:'#ef4444',
+borderDash:[5,5],
+pointRadius:0,
+fill:false
+}]
+},
+options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'top'}},scales:{y:{beginAtZero:true,title:{display:true,text:'万元'}}}}
+});
+
+new Chart(document.getElementById('deptChart'),{
+type:'bar',
+data:{
+labels:["神经内科", "腋臭项目", "神经肿瘤科", "中医康复科", "骨科", "泌尿外科", "重症医学科", "急诊科", "中医康复二组", "肾内科"],
+datasets:[{
+label:'周营收(万)',
+data:[57.82, 56.72, 31.99, 26.55, 12.95, 11.69, 10.12, 9.2, 7.9, 7.88],
+backgroundColor:['#1e40af','#2563eb','#3b82f6','#60a5fa','#93c5fd','#15803d','#22c55e','#4ade80','#86efac','#bbf7d0'],
+borderRadius:4
+}]
+},
+options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{beginAtZero:true,title:{display:true,text:'万元'}}}}
+});
+</script>
+</body>
+</html>
