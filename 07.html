@@ -87,11 +87,11 @@ a:hover { text-decoration: underline; }
   th, td { padding: 6px 8px; }
 }
 
+
 .header { background: linear-gradient(135deg, #1a73e8, #4285f4); color: #fff; padding: 18px 20px; border-radius: 12px; margin-bottom: 14px; position: relative; }
 .header h1 { font-size: 20px; font-weight: 600; }
 .header .meta { font-size: 12px; opacity: 0.85; margin-top: 4px; }
 .nav-back { position: absolute; top: 14px; right: 16px; display: inline-flex; align-items: center; gap: 4px; padding: 5px 12px; background: rgba(255,255,255,0.2); border-radius: 6px; color: #fff; text-decoration: none; font-size: 12px; }
-.nav-back:hover { background: rgba(255,255,255,0.35); }
 .nav-row { display: flex; justify-content: space-between; margin-bottom: 14px; }
 .nav-link { display: inline-block; padding: 6px 14px; background: #fff; border-radius: 8px; color: #1a73e8; text-decoration: none; font-size: 12px; box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
 .nav-link.disabled { color: #ccc; pointer-events: none; }
@@ -100,54 +100,29 @@ a:hover { text-decoration: underline; }
 .kpi-card .label { font-size: 11px; color: #888; margin-bottom: 4px; }
 .kpi-card .value { font-size: 22px; font-weight: 700; color: #1a73e8; }
 .kpi-card .unit { font-size: 12px; color: #888; }
-.kpi-card .up { color: #34a853; }
-.kpi-card .down { color: #ea4335; }
-.scroll-wrap { overflow-x: auto; }
-@media (min-width: 601px) {
-  .kpi-card { flex: 1; padding: 18px 20px; }
-  .kpi-card .value { font-size: 26px; }
-  .header h1 { font-size: 22px; }
-}
-@media (max-width: 600px) {
-  .kpi-card .value { font-size: 20px; }
-}
+@media (min-width: 601px) { .kpi-card { flex: 1; padding: 18px 20px; } .kpi-card .value { font-size: 26px; } .header h1 { font-size: 22px; } }
+@media (max-width: 600px) { .kpi-card .value { font-size: 20px; } }
+
 </style>
 </head>
 <body>
 <div class="container">
-
 <div class="header">
   <a href="index.html" class="nav-back">← 年度总览</a>
   <h1>医院 7月经营汇总</h1>
-  <div class="meta">2026年7月 | 截至2026年8月3日（共34天）</div>
+  <div class="meta">2026年7月 | 共31天数据</div>
 </div>
-
 <div class="breadcrumb"><a href="index.html">首页</a> &gt; <a href="index.html">2026年</a> &gt; 7月</div>
-
 <div class="nav-row">
   <a href="06.html" class="nav-link">← 6月</a>
-  <span class="nav-link disabled">已是最新月份</span>
+  <a href="08.html" class="nav-link">8月 →</a>
 </div>
-
 <div class="kpi-row">
-  <div class="kpi-card">
-    <div class="label">7月累计营收</div>
-    <div class="value">1677.92<span class="unit"> 万</span></div>
-  </div>
-  <div class="kpi-card">
-    <div class="label">月度目标</div>
-    <div class="value">1300<span class="unit"> 万</span></div>
-  </div>
-  <div class="kpi-card">
-    <div class="label">达成率</div>
-    <div class="value">129.1<span class="unit"> %</span></div>
-  </div>
-  <div class="kpi-card">
-    <div class="label">日均营收</div>
-    <div class="value">49.35<span class="unit"> 万</span></div>
-  </div>
+  <div class="kpi-card"><div class="label">7月累计营收</div><div class="value">1453.63<span class="unit"> 万</span></div></div>
+  <div class="kpi-card"><div class="label">月度目标</div><div class="value">1300<span class="unit"> 万</span></div></div>
+  <div class="kpi-card"><div class="label">达成率</div><div class="value">111.8<span class="unit"> %</span></div></div>
+  <div class="kpi-card"><div class="label">日均营收</div><div class="value">46.89<span class="unit"> 万</span></div></div>
 </div>
-
 <div class="card">
   <h2>📅 日历导航</h2>
   <div style="display:grid; grid-template-columns:repeat(7,1fr); gap:6px; text-align:center; padding:8px 0;">
@@ -158,88 +133,57 @@ a:hover { text-decoration: underline; }
     <div style="font-size:11px;color:#888;font-weight:600;">五</div>
     <div style="font-size:11px;color:#888;font-weight:600;">六</div>
     <div style="font-size:11px;color:#888;font-weight:600;">日</div>
-    <div></div><div></div><a href="0701.html" style="text-decoration:none;"><div style="padding:6px 2px;border-radius:6px;background:#f0f4ff;font-size:12px;cursor:pointer;"><div style="font-weight:600;color:#1a73e8;">1</div><div style="color:#555;font-size:10px;">45.9万</div></div></a><a href="0702.html" style="text-decoration:none;"><div style="padding:6px 2px;border-radius:6px;background:#f0f4ff;font-size:12px;cursor:pointer;"><div style="font-weight:600;color:#1a73e8;">2</div><div style="color:#555;font-size:10px;">41.25万</div></div></a><a href="0703.html" style="text-decoration:none;"><div style="padding:6px 2px;border-radius:6px;background:#f0f4ff;font-size:12px;cursor:pointer;"><div style="font-weight:600;color:#1a73e8;">3</div><div style="color:#555;font-size:10px;">37.92万</div></div></a><a href="0704.html" style="text-decoration:none;"><div style="padding:6px 2px;border-radius:6px;background:#f0f4ff;font-size:12px;cursor:pointer;"><div style="font-weight:600;color:#1a73e8;">4</div><div style="color:#555;font-size:10px;">38.07万</div></div></a><a href="0705.html" style="text-decoration:none;"><div style="padding:6px 2px;border-radius:6px;background:#f0f4ff;font-size:12px;cursor:pointer;"><div style="font-weight:600;color:#1a73e8;">5</div><div style="color:#555;font-size:10px;">36.42万</div></div></a><a href="0706.html" style="text-decoration:none;"><div style="padding:6px 2px;border-radius:6px;background:#f0f4ff;font-size:12px;cursor:pointer;"><div style="font-weight:600;color:#1a73e8;">6</div><div style="color:#555;font-size:10px;">53.81万</div></div></a><a href="0707.html" style="text-decoration:none;"><div style="padding:6px 2px;border-radius:6px;background:#f0f4ff;font-size:12px;cursor:pointer;"><div style="font-weight:600;color:#1a73e8;">7</div><div style="color:#555;font-size:10px;">54.72万</div></div></a><a href="0708.html" style="text-decoration:none;"><div style="padding:6px 2px;border-radius:6px;background:#f0f4ff;font-size:12px;cursor:pointer;"><div style="font-weight:600;color:#1a73e8;">8</div><div style="color:#555;font-size:10px;">48.41万</div></div></a><a href="0709.html" style="text-decoration:none;"><div style="padding:6px 2px;border-radius:6px;background:#f0f4ff;font-size:12px;cursor:pointer;"><div style="font-weight:600;color:#1a73e8;">9</div><div style="color:#555;font-size:10px;">42.14万</div></div></a><a href="0710.html" style="text-decoration:none;"><div style="padding:6px 2px;border-radius:6px;background:#f0f4ff;font-size:12px;cursor:pointer;"><div style="font-weight:600;color:#1a73e8;">10</div><div style="color:#555;font-size:10px;">50.48万</div></div></a><a href="0711.html" style="text-decoration:none;"><div style="padding:6px 2px;border-radius:6px;background:#f0f4ff;font-size:12px;cursor:pointer;"><div style="font-weight:600;color:#1a73e8;">11</div><div style="color:#555;font-size:10px;">48.62万</div></div></a><a href="0712.html" style="text-decoration:none;"><div style="padding:6px 2px;border-radius:6px;background:#f0f4ff;font-size:12px;cursor:pointer;"><div style="font-weight:600;color:#1a73e8;">12</div><div style="color:#555;font-size:10px;">31.93万</div></div></a><a href="0713.html" style="text-decoration:none;"><div style="padding:6px 2px;border-radius:6px;background:#f0f4ff;font-size:12px;cursor:pointer;"><div style="font-weight:600;color:#1a73e8;">13</div><div style="color:#555;font-size:10px;">51.87万</div></div></a><a href="0714.html" style="text-decoration:none;"><div style="padding:6px 2px;border-radius:6px;background:#f0f4ff;font-size:12px;cursor:pointer;"><div style="font-weight:600;color:#1a73e8;">14</div><div style="color:#555;font-size:10px;">53.77万</div></div></a><a href="0715.html" style="text-decoration:none;"><div style="padding:6px 2px;border-radius:6px;background:#f0f4ff;font-size:12px;cursor:pointer;"><div style="font-weight:600;color:#1a73e8;">15</div><div style="color:#555;font-size:10px;">38.49万</div></div></a><a href="0716.html" style="text-decoration:none;"><div style="padding:6px 2px;border-radius:6px;background:#f0f4ff;font-size:12px;cursor:pointer;"><div style="font-weight:600;color:#1a73e8;">16</div><div style="color:#555;font-size:10px;">49.73万</div></div></a><a href="0717.html" style="text-decoration:none;"><div style="padding:6px 2px;border-radius:6px;background:#f0f4ff;font-size:12px;cursor:pointer;"><div style="font-weight:600;color:#1a73e8;">17</div><div style="color:#555;font-size:10px;">49.34万</div></div></a><a href="0718.html" style="text-decoration:none;"><div style="padding:6px 2px;border-radius:6px;background:#f0f4ff;font-size:12px;cursor:pointer;"><div style="font-weight:600;color:#1a73e8;">18</div><div style="color:#555;font-size:10px;">72.91万</div></div></a><a href="0719.html" style="text-decoration:none;"><div style="padding:6px 2px;border-radius:6px;background:#f0f4ff;font-size:12px;cursor:pointer;"><div style="font-weight:600;color:#1a73e8;">19</div><div style="color:#555;font-size:10px;">34.12万</div></div></a><a href="0720.html" style="text-decoration:none;"><div style="padding:6px 2px;border-radius:6px;background:#f0f4ff;font-size:12px;cursor:pointer;"><div style="font-weight:600;color:#1a73e8;">20</div><div style="color:#555;font-size:10px;">38.62万</div></div></a><a href="0721.html" style="text-decoration:none;"><div style="padding:6px 2px;border-radius:6px;background:#f0f4ff;font-size:12px;cursor:pointer;"><div style="font-weight:600;color:#1a73e8;">21</div><div style="color:#555;font-size:10px;">42.16万</div></div></a><a href="0722.html" style="text-decoration:none;"><div style="padding:6px 2px;border-radius:6px;background:#f0f4ff;font-size:12px;cursor:pointer;"><div style="font-weight:600;color:#1a73e8;">22</div><div style="color:#555;font-size:10px;">45.38万</div></div></a><a href="0723.html" style="text-decoration:none;"><div style="padding:6px 2px;border-radius:6px;background:#f0f4ff;font-size:12px;cursor:pointer;"><div style="font-weight:600;color:#1a73e8;">23</div><div style="color:#555;font-size:10px;">37.05万</div></div></a><a href="0724.html" style="text-decoration:none;"><div style="padding:6px 2px;border-radius:6px;background:#f0f4ff;font-size:12px;cursor:pointer;"><div style="font-weight:600;color:#1a73e8;">24</div><div style="color:#555;font-size:10px;">45.66万</div></div></a><a href="0725.html" style="text-decoration:none;"><div style="padding:6px 2px;border-radius:6px;background:#f0f4ff;font-size:12px;cursor:pointer;"><div style="font-weight:600;color:#1a73e8;">25</div><div style="color:#555;font-size:10px;">46.66万</div></div></a><a href="0726.html" style="text-decoration:none;"><div style="padding:6px 2px;border-radius:6px;background:#f0f4ff;font-size:12px;cursor:pointer;"><div style="font-weight:600;color:#1a73e8;">26</div><div style="color:#555;font-size:10px;">89.29万</div></div></a><a href="0727.html" style="text-decoration:none;"><div style="padding:6px 2px;border-radius:6px;background:#f0f4ff;font-size:12px;cursor:pointer;"><div style="font-weight:600;color:#1a73e8;">27</div><div style="color:#555;font-size:10px;">65.54万</div></div></a><a href="0728.html" style="text-decoration:none;"><div style="padding:6px 2px;border-radius:6px;background:#f0f4ff;font-size:12px;cursor:pointer;"><div style="font-weight:600;color:#1a73e8;">28</div><div style="color:#555;font-size:10px;">50.11万</div></div></a><a href="0729.html" style="text-decoration:none;"><div style="padding:6px 2px;border-radius:6px;background:#f0f4ff;font-size:12px;cursor:pointer;"><div style="font-weight:600;color:#1a73e8;">29</div><div style="color:#555;font-size:10px;">39.84万</div></div></a><a href="0730.html" style="text-decoration:none;"><div style="padding:6px 2px;border-radius:6px;background:#f0f4ff;font-size:12px;cursor:pointer;"><div style="font-weight:600;color:#1a73e8;">30</div><div style="color:#555;font-size:10px;">35.01万</div></div></a><a href="0731.html" style="text-decoration:none;"><div style="padding:6px 2px;border-radius:6px;background:#f0f4ff;font-size:12px;cursor:pointer;"><div style="font-weight:600;color:#1a73e8;">31</div><div style="color:#555;font-size:10px;">38.4万</div></div></a><a href="0801.html" style="text-decoration:none;"><div style="padding:6px 2px;border-radius:6px;background:#f0f4ff;font-size:12px;cursor:pointer;"><div style="font-weight:600;color:#1a73e8;">101</div><div style="color:#555;font-size:10px;">83.64万</div></div></a><a href="0802.html" style="text-decoration:none;"><div style="padding:6px 2px;border-radius:6px;background:#f0f4ff;font-size:12px;cursor:pointer;"><div style="font-weight:600;color:#1a73e8;">102</div><div style="color:#555;font-size:10px;">35.02万</div></div></a><a href="0803.html" style="text-decoration:none;"><div style="padding:6px 2px;border-radius:6px;background:#f0f4ff;font-size:12px;cursor:pointer;"><div style="font-weight:600;color:#1a73e8;">103</div><div style="color:#555;font-size:10px;">105.64万</div></div></a>
+    <div></div><div></div><a href="0701.html" style="text-decoration:none;"><div style="padding:6px 2px;border-radius:6px;background:#f0f4ff;font-size:12px;cursor:pointer;"><div style="font-weight:600;color:#1a73e8;">1</div><div style="color:#555;font-size:10px;">45.9万</div></div></a><a href="0702.html" style="text-decoration:none;"><div style="padding:6px 2px;border-radius:6px;background:#f0f4ff;font-size:12px;cursor:pointer;"><div style="font-weight:600;color:#1a73e8;">2</div><div style="color:#555;font-size:10px;">41.25万</div></div></a><a href="0703.html" style="text-decoration:none;"><div style="padding:6px 2px;border-radius:6px;background:#f0f4ff;font-size:12px;cursor:pointer;"><div style="font-weight:600;color:#1a73e8;">3</div><div style="color:#555;font-size:10px;">37.92万</div></div></a><a href="0704.html" style="text-decoration:none;"><div style="padding:6px 2px;border-radius:6px;background:#f0f4ff;font-size:12px;cursor:pointer;"><div style="font-weight:600;color:#1a73e8;">4</div><div style="color:#555;font-size:10px;">38.07万</div></div></a><a href="0705.html" style="text-decoration:none;"><div style="padding:6px 2px;border-radius:6px;background:#f0f4ff;font-size:12px;cursor:pointer;"><div style="font-weight:600;color:#1a73e8;">5</div><div style="color:#555;font-size:10px;">36.42万</div></div></a><a href="0706.html" style="text-decoration:none;"><div style="padding:6px 2px;border-radius:6px;background:#f0f4ff;font-size:12px;cursor:pointer;"><div style="font-weight:600;color:#1a73e8;">6</div><div style="color:#555;font-size:10px;">53.81万</div></div></a><a href="0707.html" style="text-decoration:none;"><div style="padding:6px 2px;border-radius:6px;background:#f0f4ff;font-size:12px;cursor:pointer;"><div style="font-weight:600;color:#1a73e8;">7</div><div style="color:#555;font-size:10px;">54.72万</div></div></a><a href="0708.html" style="text-decoration:none;"><div style="padding:6px 2px;border-radius:6px;background:#f0f4ff;font-size:12px;cursor:pointer;"><div style="font-weight:600;color:#1a73e8;">8</div><div style="color:#555;font-size:10px;">48.41万</div></div></a><a href="0709.html" style="text-decoration:none;"><div style="padding:6px 2px;border-radius:6px;background:#f0f4ff;font-size:12px;cursor:pointer;"><div style="font-weight:600;color:#1a73e8;">9</div><div style="color:#555;font-size:10px;">42.14万</div></div></a><a href="0710.html" style="text-decoration:none;"><div style="padding:6px 2px;border-radius:6px;background:#f0f4ff;font-size:12px;cursor:pointer;"><div style="font-weight:600;color:#1a73e8;">10</div><div style="color:#555;font-size:10px;">50.48万</div></div></a><a href="0711.html" style="text-decoration:none;"><div style="padding:6px 2px;border-radius:6px;background:#f0f4ff;font-size:12px;cursor:pointer;"><div style="font-weight:600;color:#1a73e8;">11</div><div style="color:#555;font-size:10px;">48.62万</div></div></a><a href="0712.html" style="text-decoration:none;"><div style="padding:6px 2px;border-radius:6px;background:#f0f4ff;font-size:12px;cursor:pointer;"><div style="font-weight:600;color:#1a73e8;">12</div><div style="color:#555;font-size:10px;">31.93万</div></div></a><a href="0713.html" style="text-decoration:none;"><div style="padding:6px 2px;border-radius:6px;background:#f0f4ff;font-size:12px;cursor:pointer;"><div style="font-weight:600;color:#1a73e8;">13</div><div style="color:#555;font-size:10px;">51.87万</div></div></a><a href="0714.html" style="text-decoration:none;"><div style="padding:6px 2px;border-radius:6px;background:#f0f4ff;font-size:12px;cursor:pointer;"><div style="font-weight:600;color:#1a73e8;">14</div><div style="color:#555;font-size:10px;">53.77万</div></div></a><a href="0715.html" style="text-decoration:none;"><div style="padding:6px 2px;border-radius:6px;background:#f0f4ff;font-size:12px;cursor:pointer;"><div style="font-weight:600;color:#1a73e8;">15</div><div style="color:#555;font-size:10px;">38.49万</div></div></a><a href="0716.html" style="text-decoration:none;"><div style="padding:6px 2px;border-radius:6px;background:#f0f4ff;font-size:12px;cursor:pointer;"><div style="font-weight:600;color:#1a73e8;">16</div><div style="color:#555;font-size:10px;">49.73万</div></div></a><a href="0717.html" style="text-decoration:none;"><div style="padding:6px 2px;border-radius:6px;background:#f0f4ff;font-size:12px;cursor:pointer;"><div style="font-weight:600;color:#1a73e8;">17</div><div style="color:#555;font-size:10px;">49.34万</div></div></a><a href="0718.html" style="text-decoration:none;"><div style="padding:6px 2px;border-radius:6px;background:#f0f4ff;font-size:12px;cursor:pointer;"><div style="font-weight:600;color:#1a73e8;">18</div><div style="color:#555;font-size:10px;">72.91万</div></div></a><a href="0719.html" style="text-decoration:none;"><div style="padding:6px 2px;border-radius:6px;background:#f0f4ff;font-size:12px;cursor:pointer;"><div style="font-weight:600;color:#1a73e8;">19</div><div style="color:#555;font-size:10px;">34.12万</div></div></a><a href="0720.html" style="text-decoration:none;"><div style="padding:6px 2px;border-radius:6px;background:#f0f4ff;font-size:12px;cursor:pointer;"><div style="font-weight:600;color:#1a73e8;">20</div><div style="color:#555;font-size:10px;">38.62万</div></div></a><a href="0721.html" style="text-decoration:none;"><div style="padding:6px 2px;border-radius:6px;background:#f0f4ff;font-size:12px;cursor:pointer;"><div style="font-weight:600;color:#1a73e8;">21</div><div style="color:#555;font-size:10px;">42.16万</div></div></a><a href="0722.html" style="text-decoration:none;"><div style="padding:6px 2px;border-radius:6px;background:#f0f4ff;font-size:12px;cursor:pointer;"><div style="font-weight:600;color:#1a73e8;">22</div><div style="color:#555;font-size:10px;">45.38万</div></div></a><a href="0723.html" style="text-decoration:none;"><div style="padding:6px 2px;border-radius:6px;background:#f0f4ff;font-size:12px;cursor:pointer;"><div style="font-weight:600;color:#1a73e8;">23</div><div style="color:#555;font-size:10px;">37.05万</div></div></a><a href="0724.html" style="text-decoration:none;"><div style="padding:6px 2px;border-radius:6px;background:#f0f4ff;font-size:12px;cursor:pointer;"><div style="font-weight:600;color:#1a73e8;">24</div><div style="color:#555;font-size:10px;">45.66万</div></div></a><a href="0725.html" style="text-decoration:none;"><div style="padding:6px 2px;border-radius:6px;background:#f0f4ff;font-size:12px;cursor:pointer;"><div style="font-weight:600;color:#1a73e8;">25</div><div style="color:#555;font-size:10px;">46.66万</div></div></a><a href="0726.html" style="text-decoration:none;"><div style="padding:6px 2px;border-radius:6px;background:#f0f4ff;font-size:12px;cursor:pointer;"><div style="font-weight:600;color:#1a73e8;">26</div><div style="color:#555;font-size:10px;">89.29万</div></div></a><a href="0727.html" style="text-decoration:none;"><div style="padding:6px 2px;border-radius:6px;background:#f0f4ff;font-size:12px;cursor:pointer;"><div style="font-weight:600;color:#1a73e8;">27</div><div style="color:#555;font-size:10px;">65.54万</div></div></a><a href="0728.html" style="text-decoration:none;"><div style="padding:6px 2px;border-radius:6px;background:#f0f4ff;font-size:12px;cursor:pointer;"><div style="font-weight:600;color:#1a73e8;">28</div><div style="color:#555;font-size:10px;">50.11万</div></div></a><a href="0729.html" style="text-decoration:none;"><div style="padding:6px 2px;border-radius:6px;background:#f0f4ff;font-size:12px;cursor:pointer;"><div style="font-weight:600;color:#1a73e8;">29</div><div style="color:#555;font-size:10px;">39.84万</div></div></a><a href="0730.html" style="text-decoration:none;"><div style="padding:6px 2px;border-radius:6px;background:#f0f4ff;font-size:12px;cursor:pointer;"><div style="font-weight:600;color:#1a73e8;">30</div><div style="color:#555;font-size:10px;">35.01万</div></div></a><a href="0731.html" style="text-decoration:none;"><div style="padding:6px 2px;border-radius:6px;background:#f0f4ff;font-size:12px;cursor:pointer;"><div style="font-weight:600;color:#1a73e8;">31</div><div style="color:#555;font-size:10px;">38.4万</div></div></a>
   </div>
 </div>
-
-<div class="card">
-  <h2>📊 每日营收趋势</h2>
-  <div id="dailyTrendChart" class="chart-box"></div>
-</div>
-
-<div class="card">
-  <h2>🏥 7月科室累计营收（全科室）</h2>
-  <div id="deptChart07" class="chart-box"></div>
-</div>
-
-<div class="card">
-  <h2>💊 7月累计收入结构</h2>
-  <div id="structChart07" class="chart-box-sm"></div>
-</div>
-
+<div class="card"><h2>📊 每日营收趋势</h2><div id="dailyTrendChart" class="chart-box"></div></div>
+<div class="card"><h2>🏥 7月科室累计营收（全科室）</h2><div id="deptChartM" class="chart-box"></div></div>
+<div class="card"><h2>💊 7月累计收入结构</h2><div id="structChartM" class="chart-box-sm"></div></div>
 <div class="footer">医院经营日报系统 v2 | 数据来源：HIS系统 + WPS健管中心报表</div>
-
 </div>
-
 
 <script>
 function isMobile() { return window.innerWidth <= 600; }
-
 var dailyTrendChart = echarts.init(document.getElementById('dailyTrendChart'));
 dailyTrendChart.setOption({
   tooltip: { trigger: 'axis', formatter: function(p) { return p[0].name + '<br/>' + p.map(function(s){ return s.marker + s.seriesName + ': ' + s.value + '万'; }).join('<br/>'); } },
   legend: { data: ["日营收", "均值"], top: 5, textStyle: { fontSize: isMobile() ? 10 : 12 } },
   grid: { left: isMobile() ? 40 : 50, right: isMobile() ? 15 : 30, bottom: 35, top: 45 },
-  xAxis: { type: 'category', data: ["7/1", "7/2", "7/3", "7/4", "7/5", "7/6", "7/7", "7/8", "7/9", "7/10", "7/11", "7/12", "7/13", "7/14", "7/15", "7/16", "7/17", "7/18", "7/19", "7/20", "7/21", "7/22", "7/23", "7/24", "7/25", "7/26", "7/27", "7/28", "7/29", "7/30", "7/31", "7/101", "7/102", "7/103"], axisLabel: { fontSize: isMobile() ? 10 : 11 } },
-  yAxis: { type: 'value', name: '万元', min: 26, max: 110, axisLabel: { formatter: '{value}', fontSize: isMobile() ? 10 : 11 } },
+  xAxis: { type: 'category', data: ["7/1", "7/2", "7/3", "7/4", "7/5", "7/6", "7/7", "7/8", "7/9", "7/10", "7/11", "7/12", "7/13", "7/14", "7/15", "7/16", "7/17", "7/18", "7/19", "7/20", "7/21", "7/22", "7/23", "7/24", "7/25", "7/26", "7/27", "7/28", "7/29", "7/30", "7/31"], axisLabel: { fontSize: isMobile() ? 10 : 11 } },
+  yAxis: { type: 'value', name: '万元', min: 26, max: 94, axisLabel: { formatter: '{value}', fontSize: isMobile() ? 10 : 11 } },
   series: [
-    { name: '日营收', type: 'bar', data: [45.9, 41.25, 37.92, 38.07, 36.42, 53.81, 54.72, 48.41, 42.14, 50.48, 48.62, 31.93, 51.87, 53.77, 38.49, 49.73, 49.34, 72.91, 34.12, 38.62, 42.16, 45.38, 37.05, 45.66, 46.66, 89.29, 65.54, 50.11, 39.84, 35.01, 38.4, 83.64, 35.02, 105.64],
+    { name: '日营收', type: 'bar', data: [45.9, 41.25, 37.92, 38.07, 36.42, 53.81, 54.72, 48.41, 42.14, 50.48, 48.62, 31.93, 51.87, 53.77, 38.49, 49.73, 49.34, 72.91, 34.12, 38.62, 42.16, 45.38, 37.05, 45.66, 46.66, 89.29, 65.54, 50.11, 39.84, 35.01, 38.4],
       itemStyle: { color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{ offset: 0, color: '#4285f4' }, { offset: 1, color: '#1a73e8' }]), borderRadius: [4, 4, 0, 0] },
       barMaxWidth: 30,
       label: { show: !isMobile(), position: 'top', fontSize: 9, formatter: '{c}' }
     },
-    { name: '均值', type: 'line', data: [45.9, 43.57, 41.69, 40.78, 39.91, 42.23, 44.01, 44.56, 44.29, 44.91, 45.25, 44.14, 44.73, 45.38, 44.92, 45.22, 45.46, 46.99, 46.31, 45.93, 45.75, 45.73, 45.35, 45.37, 45.42, 47.1, 47.79, 47.87, 47.59, 47.17, 46.89, 83.64, 59.33, 74.77],
+    { name: '均值', type: 'line', data: [45.9, 43.57, 41.69, 40.78, 39.91, 42.23, 44.01, 44.56, 44.29, 44.91, 45.25, 44.14, 44.73, 45.38, 44.92, 45.22, 45.46, 46.99, 46.31, 45.93, 45.75, 45.73, 45.35, 45.37, 45.42, 47.1, 47.79, 47.87, 47.59, 47.17, 46.89],
       smooth: true, symbol: 'circle', symbolSize: isMobile() ? 4 : 6,
       lineStyle: { width: 2, type: 'dashed', color: '#ea4335' },
       itemStyle: { color: '#ea4335' }
     }
   ]
 });
-
-var deptChart07 = echarts.init(document.getElementById('deptChart07'));
-deptChart07.setOption({
+var deptChartM = echarts.init(document.getElementById('deptChartM'));
+deptChartM.setOption({
   tooltip: { trigger: 'axis', axisPointer: { type: 'shadow' } },
   grid: { left: isMobile() ? 80 : 100, right: isMobile() ? 50 : 40, bottom: 20, top: 10 },
   xAxis: { type: 'value', name: '万元', axisLabel: { formatter: '{value}', fontSize: isMobile() ? 10 : 11 } },
-  yAxis: { type: 'category', data: ["病案室", "超声科", "放射科（介入医学科）", "核医学科", "检验科", "手术室", "输血科", "药学部", "病理科", "烧伤整形科", "护理门诊", "产科", "口腔科", "耳鼻喉科", "胸外科", "儿科", "眼科", "麻醉科", "皮肤科", "普外科", "内分泌科", "妇科", "医学美容中心", "呼吸内科", "门诊部", "山大生殖专家门诊", "老年病科", "肿瘤科", "消化内科", "心内科", "中医康复二组", "重症医学科", "肾内科", "健康管理中心", "泌尿外科", "神经外科", "急诊科", "骨科", "中医康复科", "神经内科", "神经肿瘤科", "腋臭项目"], axisLabel: { fontSize: isMobile() ? 10 : 12 } },
+  yAxis: { type: 'category', data: ["病案室", "超声科", "放射科（介入医学科）", "核医学科", "检验科", "手术室", "输血科", "药学部", "病理科", "烧伤整形科", "护理门诊", "产科", "口腔科", "耳鼻喉科", "胸外科", "儿科", "眼科", "麻醉科", "皮肤科", "普外科", "内分泌科", "妇科", "医学美容中心", "呼吸内科", "门诊部", "山大生殖专家门诊", "老年病科", "肿瘤科", "消化内科", "心内科", "中医康复二组", "健康管理中心", "重症医学科", "肾内科", "泌尿外科", "神经外科", "急诊科", "骨科", "中医康复科", "神经内科", "神经肿瘤科", "腋臭项目"], axisLabel: { fontSize: isMobile() ? 10 : 12 } },
   series: [{
-    type: 'bar', barWidth: isMobile() ? 14 : 18,
-    data: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.02, 0.07, 0.19, 1.55, 2.05, 2.2, 3.48, 3.54, 3.9, 3.97, 3.97, 4.52, 5.18, 8.85, 11.97, 12.83, 13.3, 13.85, 13.91, 21.09, 36.24, 40.13, 46.33, 47.16, 47.43, 48.59, 61.49, 62.54, 65.06, 106.55, 116.59, 134.0, 227.98, 284.77],
-    itemStyle: {
-      borderRadius: [0, 4, 4, 0],
-      color: function(p) {
-        var colors = ['#0d47a1','#174ea6','#1967d2','#1a73e8','#1a73e8','#1a73e8','#4285f4','#669df6','#8ab4f8','#aecbfa'];
-        return colors[p.dataIndex] || '#1a73e8';
-      }
-    },
-    label: { show: true, position: 'right', formatter: function(p) { return p.value + '万(' + (p.value / 1677.92 * 100).toFixed(1) + '%)'; }, fontSize: isMobile() ? 9 : 11 }
+    type: 'bar', barWidth: isMobile() ? 14 : 18, data: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.02, 0.07, 0.19, 1.55, 2.05, 2.2, 3.48, 3.54, 3.9, 3.97, 3.97, 4.52, 5.18, 8.85, 11.97, 12.83, 13.3, 13.85, 13.91, 21.09, 36.24, 40.13, 46.33, 46.93, 47.16, 47.43, 61.49, 62.54, 65.06, 106.55, 116.59, 134.0, 227.98, 284.77],
+    itemStyle: { borderRadius: [0, 4, 4, 0], color: function(p) {
+      var colors = ['#0d47a1','#174ea6','#1967d2','#1a73e8','#1a73e8','#1a73e8','#4285f4','#669df6','#8ab4f8','#aecbfa'];
+      return colors[p.dataIndex] || '#1a73e8';
+    } },
+    label: { show: true, position: 'right', formatter: function(p) { return p.value + '万(' + (p.value / 1453.63 * 100).toFixed(1) + '%)'; }, fontSize: isMobile() ? 9 : 11 }
   }]
 });
-
-var structChart07 = echarts.init(document.getElementById('structChart07'));
-structChart07.setOption({
+var structChartM = echarts.init(document.getElementById('structChartM'));
+structChartM.setOption({
   tooltip: { trigger: 'item', formatter: '{b}: {c}万 ({d}%)' },
-  legend: { 
-    orient: isMobile() ? 'horizontal' : 'vertical',
-    left: isMobile() ? 'center' : 'auto',
-    right: isMobile() ? 'auto' : 10,
-    bottom: isMobile() ? 5 : 'auto',
-    top: isMobile() ? 'auto' : 'center',
-    textStyle: { fontSize: isMobile() ? 10 : 11 }
-  },
-  series: [{
-    type: 'pie', radius: ['35%', '65%'], center: isMobile() ? ['50%', '40%'] : ['35%', '50%'],
-    label: { show: false },
+  legend: { orient: isMobile() ? 'horizontal' : 'vertical', left: isMobile() ? 'center' : 'auto', right: isMobile() ? 'auto' : 10, bottom: isMobile() ? 5 : 'auto', top: isMobile() ? 'auto' : 'center', textStyle: { fontSize: isMobile() ? 10 : 11 } },
+  series: [{ type: 'pie', radius: ['35%', '65%'], center: isMobile() ? ['50%', '40%'] : ['35%', '50%'], label: { show: false },
     data: [
       { value: 311.03, name: '药品', itemStyle: { color: '#1a73e8' } },
       { value: 338.97, name: '耗材', itemStyle: { color: '#4285f4' } },
@@ -249,8 +193,7 @@ structChart07.setOption({
     ]
   }]
 });
-
-window.addEventListener('resize', function() { dailyTrendChart.resize(); deptChart07.resize(); structChart07.resize(); });
+window.addEventListener('resize', function() { dailyTrendChart.resize(); deptChartM.resize(); structChartM.resize(); });
 </script>
 </body>
 </html>
