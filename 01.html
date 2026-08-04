@@ -17,7 +17,7 @@
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>医院 2026年1月经营汇总</title>
+<title>医院 2027年1月经营汇总</title>
 <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
 <script>
 if(typeof echarts==='undefined'){document.write('<scr'+'ipt src="https://cdn.bootcdn.net/ajax/libs/echarts/5.4.3/echarts.min.js"><\/scr'+'ipt>')}
@@ -87,6 +87,7 @@ a:hover { text-decoration: underline; }
   th, td { padding: 6px 8px; }
 }
 
+
 .header { background: linear-gradient(135deg, #1a73e8, #4285f4); color: #fff; padding: 18px 20px; border-radius: 12px; margin-bottom: 14px; position: relative; }
 .header h1 { font-size: 20px; font-weight: 600; }
 .header .meta { font-size: 12px; opacity: 0.85; margin-top: 4px; }
@@ -99,426 +100,111 @@ a:hover { text-decoration: underline; }
 .kpi-card .label { font-size: 11px; color: #888; margin-bottom: 4px; }
 .kpi-card .value { font-size: 22px; font-weight: 700; color: #1a73e8; }
 .kpi-card .unit { font-size: 12px; color: #888; }
-.chart-row { display: flex; flex-wrap: wrap; gap: 14px; }
-.chart-row .card { flex: 1 1 calc(50% - 7px); min-width: 0; margin-bottom: 0; }
-.scroll-wrap { overflow-x: auto; }
-@media (min-width: 601px) {
-  .kpi-card { flex: 1; padding: 18px 20px; }
-  .kpi-card .value { font-size: 26px; }
-  .header h1 { font-size: 22px; }
-}
-@media (max-width: 600px) {
-  .kpi-card .value { font-size: 20px; }
-}
+@media (min-width: 601px) { .kpi-card { flex: 1; padding: 18px 20px; } .kpi-card .value { font-size: 26px; } .header h1 { font-size: 22px; } }
+@media (max-width: 600px) { .kpi-card .value { font-size: 20px; } }
+
 </style>
 </head>
 <body>
 <div class="container">
-
 <div class="header">
   <a href="index.html" class="nav-back">← 年度总览</a>
   <h1>医院 1月经营汇总</h1>
-  <div class="meta">2026年1月 | 31天</div>
+  <div class="meta">2027年1月 | 共1天数据</div>
 </div>
-
-<div class="breadcrumb"><a href="index.html">首页</a> &gt; <a href="index.html">2026年</a> &gt; 1月</div>
-
+<div class="breadcrumb"><a href="index.html">首页</a> &gt; <a href="index.html">2027年</a> &gt; 1月</div>
 <div class="nav-row">
   <span class="nav-link disabled">已是首月</span>
-  <a href="02.html" class="nav-link">2月 →</a>
+  <span class="nav-link disabled">已是最新月份</span>
 </div>
-
 <div class="kpi-row">
-  <div class="kpi-card">
-    <div class="label">月度总营收</div>
-    <div class="value">620.9<span class="unit"> 万</span></div>
-  </div>
-  <div class="kpi-card">
-    <div class="label">门诊人次</div>
-    <div class="value">4,830<span class="unit"> 人次</span></div>
-  </div>
-  <div class="kpi-card">
-    <div class="label">住院人次</div>
-    <div class="value">473<span class="unit"> 人次</span></div>
-  </div>
-  <div class="kpi-card">
-    <div class="label">手术台次</div>
-    <div class="value">41<span class="unit"> 台次</span></div>
-  </div>
-  <div class="kpi-card">
-    <div class="label">日均营收</div>
-    <div class="value">20.03<span class="unit"> 万</span></div>
-  </div>
+  <div class="kpi-card"><div class="label">1月累计营收</div><div class="value">50.0<span class="unit"> 万</span></div></div>
+  <div class="kpi-card"><div class="label">月度目标</div><div class="value">1300<span class="unit"> 万</span></div></div>
+  <div class="kpi-card"><div class="label">达成率</div><div class="value">3.8<span class="unit"> %</span></div></div>
+  <div class="kpi-card"><div class="label">日均营收</div><div class="value">50.0<span class="unit"> 万</span></div></div>
 </div>
-
-<div class="chart-row">
-  <div class="card">
-    <h2>💊 收入结构</h2>
-    <div id="structChart" class="chart-box-sm"></div>
-  </div>
-  <div class="card">
-    <h2>🏥 科室营收排名（全科室）</h2>
-    <div id="deptChart" class="chart-box"></div>
-  </div>
-</div>
-
 <div class="card">
-  <h2>📋 科室营收排名明细（全科室）</h2>
-  <div class="scroll-wrap">
+  <h2>📅 日历导航</h2>
+  <div style="display:grid; grid-template-columns:repeat(7,1fr); gap:6px; text-align:center; padding:8px 0;">
+    <div style="font-size:11px;color:#888;font-weight:600;">一</div>
+    <div style="font-size:11px;color:#888;font-weight:600;">二</div>
+    <div style="font-size:11px;color:#888;font-weight:600;">三</div>
+    <div style="font-size:11px;color:#888;font-weight:600;">四</div>
+    <div style="font-size:11px;color:#888;font-weight:600;">五</div>
+    <div style="font-size:11px;color:#888;font-weight:600;">六</div>
+    <div style="font-size:11px;color:#888;font-weight:600;">日</div>
+    <div></div><div></div><div></div><div></div><a href="0101.html" style="text-decoration:none;"><div style="padding:6px 2px;border-radius:6px;background:#f0f4ff;font-size:12px;cursor:pointer;"><div style="font-weight:600;color:#1a73e8;">1</div><div style="color:#555;font-size:10px;">50.0万</div></div></a>
+  </div>
+</div>
+<div class="card"><h2>📊 每日营收趋势</h2><div id="dailyTrendChart" class="chart-box"></div></div>
+<div class="card"><h2>🏥 1月科室累计营收（全科室）</h2><div id="deptChartM" class="chart-box"></div></div>
+<div class="card"><h2>💊 1月累计收入结构</h2><div id="structChartM" class="chart-box-sm"></div></div>
+<div class="card">
+  <h2>📋 每日营收明细</h2>
+  <div class="table-wrap">
   <table>
-    <thead>
-      <tr><th>#</th><th>科室</th><th>营收(万)</th><th>占比</th><th>药耗占比</th></tr>
-    </thead>
+    <thead><tr><th>日期</th><th>当日营收(万)</th><th>累计(万)</th><th>达成率</th><th>时间进度</th><th>进度差</th></tr></thead>
     <tbody>
-      <tr>
-        <td>1</td>
-        <td><b>神经肿瘤科</b></td>
-        <td>232.54</td>
-        <td>37.45%</td>
-        <td>87.37%</td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td><b>神经内科</b></td>
-        <td>73.37</td>
-        <td>11.82%</td>
-        <td>79.01%</td>
-      </tr>
-      <tr>
-        <td>3</td>
-        <td><b>中医康复科</b></td>
-        <td>54.59</td>
-        <td>8.79%</td>
-        <td>10.93%</td>
-      </tr>
-      <tr>
-        <td>4</td>
-        <td><b>神经外科</b></td>
-        <td>41.27</td>
-        <td>6.65%</td>
-        <td>92.87%</td>
-      </tr>
-      <tr>
-        <td>5</td>
-        <td><b>重症医学科</b></td>
-        <td>26.32</td>
-        <td>4.24%</td>
-        <td>38.92%</td>
-      </tr>
-      <tr>
-        <td>6</td>
-        <td><b>肾内科</b></td>
-        <td>23.67</td>
-        <td>3.81%</td>
-        <td>27.28%</td>
-      </tr>
-      <tr>
-        <td>7</td>
-        <td><b>妇科</b></td>
-        <td>22.04</td>
-        <td>3.55%</td>
-        <td>26.98%</td>
-      </tr>
-      <tr>
-        <td>8</td>
-        <td><b>急诊科</b></td>
-        <td>21.25</td>
-        <td>3.42%</td>
-        <td>15.67%</td>
-      </tr>
-      <tr>
-        <td>9</td>
-        <td><b>消化内科</b></td>
-        <td>16.81</td>
-        <td>2.71%</td>
-        <td>20.81%</td>
-      </tr>
-      <tr>
-        <td>10</td>
-        <td><b>心内科</b></td>
-        <td>14.34</td>
-        <td>2.31%</td>
-        <td>35.21%</td>
-      </tr>
-      <tr>
-        <td>11</td>
-        <td><b>胸外科</b></td>
-        <td>13.43</td>
-        <td>2.16%</td>
-        <td>52.88%</td>
-      </tr>
-      <tr>
-        <td>12</td>
-        <td><b>肿瘤科</b></td>
-        <td>11.57</td>
-        <td>1.86%</td>
-        <td>60.48%</td>
-      </tr>
-      <tr>
-        <td>13</td>
-        <td><b>骨科</b></td>
-        <td>11.3</td>
-        <td>1.82%</td>
-        <td>32.51%</td>
-      </tr>
-      <tr>
-        <td>14</td>
-        <td><b>健康管理中心</b></td>
-        <td>6.66</td>
-        <td>1.07%</td>
-        <td>0.48%</td>
-      </tr>
-      <tr>
-        <td>15</td>
-        <td><b>内分泌科</b></td>
-        <td>6.54</td>
-        <td>1.05%</td>
-        <td>29.15%</td>
-      </tr>
-      <tr>
-        <td>16</td>
-        <td><b>呼吸内科</b></td>
-        <td>6.35</td>
-        <td>1.02%</td>
-        <td>38.49%</td>
-      </tr>
-      <tr>
-        <td>17</td>
-        <td><b>门诊部</b></td>
-        <td>5.65</td>
-        <td>0.91%</td>
-        <td>56.32%</td>
-      </tr>
-      <tr>
-        <td>18</td>
-        <td><b>医学美容中心</b></td>
-        <td>5.45</td>
-        <td>0.88%</td>
-        <td>54.44%</td>
-      </tr>
-      <tr>
-        <td>19</td>
-        <td><b>儿科</b></td>
-        <td>5.26</td>
-        <td>0.85%</td>
-        <td>45.18%</td>
-      </tr>
-      <tr>
-        <td>20</td>
-        <td><b>中医康复二组</b></td>
-        <td>5.13</td>
-        <td>0.83%</td>
-        <td>8.88%</td>
-      </tr>
-      <tr>
-        <td>21</td>
-        <td><b>皮肤科</b></td>
-        <td>5.12</td>
-        <td>0.82%</td>
-        <td>29.86%</td>
-      </tr>
-      <tr>
-        <td>22</td>
-        <td><b>老年病科</b></td>
-        <td>5.11</td>
-        <td>0.82%</td>
-        <td>39.13%</td>
-      </tr>
-      <tr>
-        <td>23</td>
-        <td><b>普外科</b></td>
-        <td>2.12</td>
-        <td>0.34%</td>
-        <td>14.8%</td>
-      </tr>
-      <tr>
-        <td>24</td>
-        <td><b>眼科</b></td>
-        <td>1.89</td>
-        <td>0.3%</td>
-        <td>21.42%</td>
-      </tr>
-      <tr>
-        <td>25</td>
-        <td><b>产科</b></td>
-        <td>0.92</td>
-        <td>0.15%</td>
-        <td>53.52%</td>
-      </tr>
-      <tr>
-        <td>26</td>
-        <td><b>烧伤整形科</b></td>
-        <td>0.56</td>
-        <td>0.09%</td>
-        <td>3.8%</td>
-      </tr>
-      <tr>
-        <td>27</td>
-        <td><b>麻醉科</b></td>
-        <td>0.43</td>
-        <td>0.07%</td>
-        <td>12.82%</td>
-      </tr>
-      <tr>
-        <td>28</td>
-        <td><b>泌尿外科</b></td>
-        <td>0.38</td>
-        <td>0.06%</td>
-        <td>28.86%</td>
-      </tr>
-      <tr>
-        <td>29</td>
-        <td><b>口腔科</b></td>
-        <td>0.32</td>
-        <td>0.05%</td>
-        <td>14.27%</td>
-      </tr>
-      <tr>
-        <td>30</td>
-        <td><b>耳鼻喉科</b></td>
-        <td>0.25</td>
-        <td>0.04%</td>
-        <td>45.93%</td>
-      </tr>
-      <tr>
-        <td>31</td>
-        <td><b>护理门诊</b></td>
-        <td>0.25</td>
-        <td>0.04%</td>
-        <td>73.98%</td>
-      </tr>
-      <tr>
-        <td>32</td>
-        <td><b>腋臭项目</b></td>
-        <td>0.0</td>
-        <td>0.0%</td>
-        <td>0%</td>
-      </tr>
-      <tr>
-        <td>33</td>
-        <td><b>药学部</b></td>
-        <td>0.0</td>
-        <td>0.0%</td>
-        <td>0%</td>
-      </tr>
-      <tr>
-        <td>34</td>
-        <td><b>输血科</b></td>
-        <td>0.0</td>
-        <td>0.0%</td>
-        <td>0%</td>
-      </tr>
-      <tr>
-        <td>35</td>
-        <td><b>手术室</b></td>
-        <td>0.0</td>
-        <td>0.0%</td>
-        <td>0%</td>
-      </tr>
-      <tr>
-        <td>36</td>
-        <td><b>山大生殖专家门诊</b></td>
-        <td>0.0</td>
-        <td>0.0%</td>
-        <td>0%</td>
-      </tr>
-      <tr>
-        <td>37</td>
-        <td><b>检验科</b></td>
-        <td>0.0</td>
-        <td>0.0%</td>
-        <td>0%</td>
-      </tr>
-      <tr>
-        <td>38</td>
-        <td><b>核医学科</b></td>
-        <td>0.0</td>
-        <td>0.0%</td>
-        <td>0%</td>
-      </tr>
-      <tr>
-        <td>39</td>
-        <td><b>放射科（介入医学科）</b></td>
-        <td>0.0</td>
-        <td>0.0%</td>
-        <td>0%</td>
-      </tr>
-      <tr>
-        <td>40</td>
-        <td><b>超声科</b></td>
-        <td>0.0</td>
-        <td>0.0%</td>
-        <td>0%</td>
-      </tr>
-      <tr>
-        <td>41</td>
-        <td><b>病理科</b></td>
-        <td>0.0</td>
-        <td>0.0%</td>
-        <td>0%</td>
-      </tr>
-      <tr>
-        <td>42</td>
-        <td><b>病案室</b></td>
-        <td>0.0</td>
-        <td>0.0%</td>
-        <td>0%</td>
-      </tr>
+    <tr><td><a href="0101.html">1/01 周五</a></td><td>50.0</td><td>50.0</td><td>3.85%</td><td>3.23%</td><td><span class='up'>+0.62pp</span></td></tr>
     </tbody>
   </table>
   </div>
 </div>
-
-<div class="footer">医院经营日报系统 v2 | 数据来源：HIS系统</div>
-
+<div class="footer">医院经营日报系统 v2 | 数据来源：HIS系统 + WPS健管中心报表</div>
 </div>
-
 
 <script>
 function isMobile() { return window.innerWidth <= 600; }
-var deptChart = echarts.init(document.getElementById('deptChart'));
-deptChart.setOption({
+var dailyTrendChart = echarts.init(document.getElementById('dailyTrendChart'));
+dailyTrendChart.setOption({
+  tooltip: { trigger: 'axis', formatter: function(p) { return p[0].name + '<br/>' + p.map(function(s){ return s.marker + s.seriesName + ': ' + s.value + '万'; }).join('<br/>'); } },
+  legend: { data: ["日营收", "均值"], top: 5, textStyle: { fontSize: isMobile() ? 10 : 12 } },
+  grid: { left: isMobile() ? 40 : 50, right: isMobile() ? 15 : 30, bottom: 35, top: 45 },
+  xAxis: { type: 'category', data: ["1/1"], axisLabel: { fontSize: isMobile() ? 10 : 11 } },
+  yAxis: { type: 'value', name: '万元', min: 45, max: 55, axisLabel: { formatter: '{value}', fontSize: isMobile() ? 10 : 11 } },
+  series: [
+    { name: '日营收', type: 'bar', data: [50.0],
+      itemStyle: { color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{ offset: 0, color: '#4285f4' }, { offset: 1, color: '#1a73e8' }]), borderRadius: [4, 4, 0, 0] },
+      barMaxWidth: 30,
+      label: { show: !isMobile(), position: 'top', fontSize: 9, formatter: '{c}' }
+    },
+    { name: '均值', type: 'line', data: [50.0],
+      smooth: true, symbol: 'circle', symbolSize: isMobile() ? 4 : 6,
+      lineStyle: { width: 2, type: 'dashed', color: '#ea4335' },
+      itemStyle: { color: '#ea4335' }
+    }
+  ]
+});
+var deptChartM = echarts.init(document.getElementById('deptChartM'));
+deptChartM.setOption({
   tooltip: { trigger: 'axis', axisPointer: { type: 'shadow' } },
   grid: { left: isMobile() ? 80 : 100, right: isMobile() ? 50 : 40, bottom: 20, top: 10 },
   xAxis: { type: 'value', name: '万元', axisLabel: { formatter: '{value}', fontSize: isMobile() ? 10 : 11 } },
-  yAxis: { type: 'category', data: ["病案室", "病理科", "超声科", "放射科（介入医学科）", "核医学科", "检验科", "山大生殖专家门诊", "手术室", "输血科", "药学部", "腋臭项目", "护理门诊", "耳鼻喉科", "口腔科", "泌尿外科", "麻醉科", "烧伤整形科", "产科", "眼科", "普外科", "老年病科", "皮肤科", "中医康复二组", "儿科", "医学美容中心", "门诊部", "呼吸内科", "内分泌科", "健康管理中心", "骨科", "肿瘤科", "胸外科", "心内科", "消化内科", "急诊科", "妇科", "肾内科", "重症医学科", "神经外科", "中医康复科", "神经内科", "神经肿瘤科"], axisLabel: { fontSize: isMobile() ? 10 : 12 } },
+  yAxis: { type: 'category', data: [], axisLabel: { fontSize: isMobile() ? 10 : 12 } },
   series: [{
-    type: 'bar', barWidth: isMobile() ? 14 : 18,
-    data: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.25, 0.25, 0.32, 0.38, 0.43, 0.56, 0.92, 1.89, 2.12, 5.11, 5.12, 5.13, 5.26, 5.45, 5.65, 6.35, 6.54, 6.66, 11.3, 11.57, 13.43, 14.34, 16.81, 21.25, 22.04, 23.67, 26.32, 41.27, 54.59, 73.37, 232.54],
-    itemStyle: {
-      borderRadius: [0, 4, 4, 0],
-      color: function(p) {
-        var colors = ['#0d47a1','#174ea6','#1967d2','#1a73e8','#1a73e8','#1a73e8','#4285f4','#669df6','#8ab4f8','#aecbfa'];
-        return colors[p.dataIndex] || '#1a73e8';
-      }
-    },
-    label: { show: true, position: 'right', formatter: function(p) { return p.value + '万(' + (p.value / 620.9 * 100).toFixed(1) + '%)'; }, fontSize: isMobile() ? 9 : 11 }
+    type: 'bar', barWidth: isMobile() ? 14 : 18, data: [],
+    itemStyle: { borderRadius: [0, 4, 4, 0], color: function(p) {
+      var colors = ['#0d47a1','#174ea6','#1967d2','#1a73e8','#1a73e8','#1a73e8','#4285f4','#669df6','#8ab4f8','#aecbfa'];
+      return colors[p.dataIndex] || '#1a73e8';
+    } },
+    label: { show: true, position: 'right', formatter: function(p) { return p.value + '万(' + (p.value / 50.0 * 100).toFixed(1) + '%)'; }, fontSize: isMobile() ? 9 : 11 }
   }]
 });
-var structChart = echarts.init(document.getElementById('structChart'));
-structChart.setOption({
+var structChartM = echarts.init(document.getElementById('structChartM'));
+structChartM.setOption({
   tooltip: { trigger: 'item', formatter: '{b}: {c}万 ({d}%)' },
-  legend: {
-    orient: isMobile() ? 'horizontal' : 'vertical',
-    left: isMobile() ? 'center' : 'auto',
-    right: isMobile() ? 'auto' : 10,
-    bottom: isMobile() ? 5 : 'auto',
-    top: isMobile() ? 'auto' : 'center',
-    textStyle: { fontSize: isMobile() ? 10 : 11 }
-  },
-  series: [{
-    type: 'pie', radius: ['35%', '65%'], center: isMobile() ? ['50%', '40%'] : ['35%', '50%'],
-    label: { show: false },
+  legend: { orient: isMobile() ? 'horizontal' : 'vertical', left: isMobile() ? 'center' : 'auto', right: isMobile() ? 'auto' : 10, bottom: isMobile() ? 5 : 'auto', top: isMobile() ? 'auto' : 'center', textStyle: { fontSize: isMobile() ? 10 : 11 } },
+  series: [{ type: 'pie', radius: ['35%', '65%'], center: isMobile() ? ['50%', '40%'] : ['35%', '50%'], label: { show: false },
     data: [
-      { value: 205.41, name: '药品', itemStyle: { color: '#1a73e8' } },
-      { value: 170.98, name: '耗材', itemStyle: { color: '#4285f4' } },
-      { value: 71.59, name: '检查', itemStyle: { color: '#34a853' } },
-      { value: 72.44, name: '治疗', itemStyle: { color: '#fbbc04' } },
-      { value: 100.49, name: '其他', itemStyle: { color: '#9aa0a6' } }
+      { value: 0, name: '药品', itemStyle: { color: '#1a73e8' } },
+      { value: 0, name: '耗材', itemStyle: { color: '#4285f4' } },
+      { value: 0, name: '检查', itemStyle: { color: '#34a853' } },
+      { value: 0, name: '治疗', itemStyle: { color: '#fbbc04' } },
+      { value: 0, name: '其他', itemStyle: { color: '#9aa0a6' } }
     ]
   }]
 });
-window.addEventListener('resize', function() { deptChart.resize(); structChart.resize(); });
+window.addEventListener('resize', function() { dailyTrendChart.resize(); deptChartM.resize(); structChartM.resize(); });
 </script>
 </body>
 </html>
