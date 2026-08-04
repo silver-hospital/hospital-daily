@@ -259,7 +259,7 @@ var jianguanChart = echarts.init(document.getElementById('jianguanChart'));
 jianguanChart.setOption({
   tooltip: { trigger: 'axis' },
   grid: { left: isMobile() ? 45 : 55, right: isMobile() ? 15 : 30, bottom: 35, top: 25 },
-  xAxis: { type: 'category', data: ["1", "2"], axisLabel: { fontSize: isMobile() ? 10 : 11 } },
+  xAxis: { type: 'category', data: ["8/1", "8/2"], axisLabel: { fontSize: isMobile() ? 10 : 11 } },
   yAxis: { type: 'value', name: '万元', axisLabel: { formatter: '{value}', fontSize: isMobile() ? 10 : 11 } },
   series: [
     { name: '健管', type: 'bar', data: [1.0, 0.66],
