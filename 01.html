@@ -17,7 +17,7 @@
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>医院 1月经营汇总</title>
+<title>医院 2026年1月经营汇总</title>
 <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
 <script>
 if(typeof echarts==='undefined'){document.write('<scr'+'ipt src="https://cdn.bootcdn.net/ajax/libs/echarts/5.4.3/echarts.min.js"><\/scr'+'ipt>')}
@@ -91,7 +91,6 @@ a:hover { text-decoration: underline; }
 .header h1 { font-size: 20px; font-weight: 600; }
 .header .meta { font-size: 12px; opacity: 0.85; margin-top: 4px; }
 .nav-back { position: absolute; top: 14px; right: 16px; display: inline-flex; align-items: center; gap: 4px; padding: 5px 12px; background: rgba(255,255,255,0.2); border-radius: 6px; color: #fff; text-decoration: none; font-size: 12px; }
-.nav-back:hover { background: rgba(255,255,255,0.35); }
 .nav-row { display: flex; justify-content: space-between; margin-bottom: 14px; }
 .nav-link { display: inline-block; padding: 6px 14px; background: #fff; border-radius: 8px; color: #1a73e8; text-decoration: none; font-size: 12px; box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
 .nav-link.disabled { color: #ccc; pointer-events: none; }
@@ -124,8 +123,6 @@ a:hover { text-decoration: underline; }
 
 <div class="breadcrumb"><a href="index.html">首页</a> &gt; <a href="index.html">2026年</a> &gt; 1月</div>
 
-
-
 <div class="nav-row">
   <span class="nav-link disabled">已是首月</span>
   <a href="02.html" class="nav-link">2月 →</a>
@@ -138,15 +135,15 @@ a:hover { text-decoration: underline; }
   </div>
   <div class="kpi-card">
     <div class="label">门诊人次</div>
-    <div class="value">4,830.0<span class="unit"> 人次</span></div>
+    <div class="value">4,830<span class="unit"> 人次</span></div>
   </div>
   <div class="kpi-card">
     <div class="label">住院人次</div>
-    <div class="value">473.0<span class="unit"> 人次</span></div>
+    <div class="value">473<span class="unit"> 人次</span></div>
   </div>
   <div class="kpi-card">
     <div class="label">手术台次</div>
-    <div class="value">41.0<span class="unit"> 台次</span></div>
+    <div class="value">41<span class="unit"> 台次</span></div>
   </div>
   <div class="kpi-card">
     <div class="label">日均营收</div>
@@ -479,7 +476,6 @@ a:hover { text-decoration: underline; }
 
 <script>
 function isMobile() { return window.innerWidth <= 600; }
-
 var deptChart = echarts.init(document.getElementById('deptChart'));
 deptChart.setOption({
   tooltip: { trigger: 'axis', axisPointer: { type: 'shadow' } },
@@ -499,11 +495,10 @@ deptChart.setOption({
     label: { show: true, position: 'right', formatter: function(p) { return p.value + '万(' + (p.value / 620.9 * 100).toFixed(1) + '%)'; }, fontSize: isMobile() ? 9 : 11 }
   }]
 });
-
 var structChart = echarts.init(document.getElementById('structChart'));
 structChart.setOption({
   tooltip: { trigger: 'item', formatter: '{b}: {c}万 ({d}%)' },
-  legend: { 
+  legend: {
     orient: isMobile() ? 'horizontal' : 'vertical',
     left: isMobile() ? 'center' : 'auto',
     right: isMobile() ? 'auto' : 10,
@@ -523,7 +518,6 @@ structChart.setOption({
     ]
   }]
 });
-
 window.addEventListener('resize', function() { deptChart.resize(); structChart.resize(); });
 </script>
 </body>

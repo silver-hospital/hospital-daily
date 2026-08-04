@@ -23,6 +23,7 @@
 if(typeof echarts==='undefined'){document.write('<scr'+'ipt src="https://cdn.bootcdn.net/ajax/libs/echarts/5.4.3/echarts.min.js"><\/scr'+'ipt>')}
 </script>
 <style>
+
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { font-family: -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif; background: #f5f7fa; color: #333; padding: 12px; }
 .container { max-width: 1000px; margin: 0 auto; }
@@ -61,6 +62,8 @@ tr:hover { background: #f8f9fa; }
 .alert-yellow { background: #fef7e0; border-left: 3px solid #e37400; }
 .footer { text-align: center; font-size: 11px; color: #aaa; padding: 12px 0; }
 .scroll-hint { display: none; font-size: 11px; color: #999; text-align: right; margin-bottom: 4px; }
+a { color: #1a73e8; text-decoration: none; }
+a:hover { text-decoration: underline; }
 @media (min-width: 601px) {
   body { padding: 20px; }
   .header { padding: 24px 32px; margin-bottom: 20px; }
@@ -81,7 +84,9 @@ tr:hover { background: #f8f9fa; }
   .chart-box-sm { height: 240px; }
   .scroll-hint { display: block; }
   table { font-size: 12px; }
+  th, td { padding: 6px 8px; }
 }
+
 </style>
 </head>
 <body>
@@ -304,7 +309,7 @@ structChart.setOption({
       { value: 80.45, name: '耗材', itemStyle: { color: '#4285f4' } },
       { value: 48.89, name: '检查', itemStyle: { color: '#34a853' } },
       { value: 86.66, name: '治疗', itemStyle: { color: '#fbbc04' } },
-      { value: 127.58, name: '其他', itemStyle: { color: '#9aa0a6' } }
+      { value: 127.59, name: '其他', itemStyle: { color: '#9aa0a6' } }
     ]
   }]
 });
@@ -347,7 +352,6 @@ progressChart.setOption({
   ]
 });
 
-// 窗口resize自适应
 window.addEventListener('resize', function() {
   trendChart.resize(); jianguanChart.resize(); deptChart.resize();
   structChart.resize(); progressChart.resize();

@@ -17,7 +17,7 @@
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>医院 8月经营汇总</title>
+<title>医院 2026年8月经营汇总</title>
 <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
 <script>
 if(typeof echarts==='undefined'){document.write('<scr'+'ipt src="https://cdn.bootcdn.net/ajax/libs/echarts/5.4.3/echarts.min.js"><\/scr'+'ipt>')}
@@ -139,6 +139,19 @@ a:hover { text-decoration: underline; }
 <div class="card"><h2>📊 每日营收趋势</h2><div id="dailyTrendChart" class="chart-box"></div></div>
 <div class="card"><h2>🏥 8月科室累计营收（全科室）</h2><div id="deptChartM" class="chart-box"></div></div>
 <div class="card"><h2>💊 8月累计收入结构</h2><div id="structChartM" class="chart-box-sm"></div></div>
+<div class="card">
+  <h2>📋 每日营收明细</h2>
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th>日期</th><th>当日营收(万)</th><th>累计(万)</th><th>达成率</th><th>时间进度</th><th>进度差</th></tr></thead>
+    <tbody>
+    <tr><td><a href="0801.html">8/01 周六</a></td><td>83.64</td><td>83.64</td><td>6.43%</td><td>3.2258%</td><td><span class='up'>+3.21pp</span></td></tr>
+    <tr><td><a href="0802.html">8/02 周日</a></td><td>35.02</td><td>118.65</td><td>9.13%</td><td>6.4516%</td><td><span class='up'>+2.68pp</span></td></tr>
+    <tr><td><a href="0803.html">8/03 周一</a></td><td>105.64</td><td>224.3</td><td>17.25%</td><td>9.6774%</td><td><span class='up'>+7.58pp</span></td></tr>
+    </tbody>
+  </table>
+  </div>
+</div>
 <div class="footer">医院经营日报系统 v2 | 数据来源：HIS系统 + WPS健管中心报表</div>
 </div>
 
@@ -157,7 +170,7 @@ dailyTrendChart.setOption({
       barMaxWidth: 30,
       label: { show: !isMobile(), position: 'top', fontSize: 9, formatter: '{c}' }
     },
-    { name: '均值', type: 'line', data: [-1369.99, -667.49, -409.78],
+    { name: '均值', type: 'line', data: [83.64, 59.33, 74.77],
       smooth: true, symbol: 'circle', symbolSize: isMobile() ? 4 : 6,
       lineStyle: { width: 2, type: 'dashed', color: '#ea4335' },
       itemStyle: { color: '#ea4335' }
