@@ -123,7 +123,7 @@ a:hover { text-decoration: underline; }
 
 <div class="header">
   <h1>🏥 医院 2026年经营总览</h1>
-  <div class="sub">数据截至 2026年8月31日</div>
+  <div class="sub">数据截至 2026年9月2日</div>
 </div>
 
 <div class="breadcrumb">📍 首页 &gt; 2026年</div>
@@ -131,24 +131,24 @@ a:hover { text-decoration: underline; }
 <div class="kpi-row">
   <div class="kpi-card">
     <div class="label">年度累计营收</div>
-    <div class="value">9031.48<span class="unit"> 万</span></div>
+    <div class="value">9108.78<span class="unit"> 万</span></div>
   </div>
   <div class="kpi-card">
     <div class="label">月均营收</div>
-    <div class="value">1128.93<span class="unit"> 万</span></div>
+    <div class="value">1012.09<span class="unit"> 万</span></div>
   </div>
   <div class="kpi-card">
     <div class="label">日均营收</div>
-    <div class="value">37.17<span class="unit"> 万</span></div>
+    <div class="value">37.18<span class="unit"> 万</span></div>
   </div>
   <div class="kpi-card">
     <div class="label">已完成月数</div>
-    <div class="value">8<span class="unit"> / 12 月</span></div>
+    <div class="value">9<span class="unit"> / 12 月</span></div>
   </div>
 </div>
 
 <div class="card">
-  <h2>📈 月度营收趋势（1-8月）</h2>
+  <h2>📈 月度营收趋势（1-9月）</h2>
   <div id="monthTrendChart" class="chart-box"></div>
 </div>
 
@@ -212,12 +212,12 @@ a:hover { text-decoration: underline; }
             <div class="month-status">✓ 已出</div>
           </a>
         </div>
-        <div class="month-card inactive">
-          <span>
+        <div class="month-card active">
+          <a href="09.html">
             <div class="month-num">9月</div>
-            <div class="month-rev">—</div>
-            <div class="month-status">未出</div>
-          </span>
+            <div class="month-rev">77.3万</div>
+            <div class="month-status">📊2天</div>
+          </a>
         </div>
         <div class="month-card inactive">
           <span>
@@ -315,12 +315,20 @@ a:hover { text-decoration: underline; }
         <td>—</td>
         <td>58.67</td>
       </tr>
+      <tr style="background:#e8f0fe">
+        <td><a href="09.html">9月</a> <span style="font-size:10px;color:#1a73e8">📊2天</span></td>
+        <td><b>77.3</b></td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+        <td>38.65</td>
+      </tr>
     </tbody>
   </table>
   </div>
 </div>
 
-<div class="footer">医院经营日报系统 v2 | 数据更新：2026年8月31日</div>
+<div class="footer">医院经营日报系统 v2 | 数据更新：2026年9月2日</div>
 
 </div>
 
@@ -331,10 +339,10 @@ var monthTrendChart = echarts.init(document.getElementById('monthTrendChart'));
 monthTrendChart.setOption({
   tooltip: { trigger: 'axis', formatter: function(p) { return p[0].name + '<br/>' + p.map(function(s){ return s.marker + s.seriesName + ': ' + s.value + '万'; }).join('<br/>'); } },
   grid: { left: isMobile() ? 45 : 55, right: isMobile() ? 15 : 30, bottom: 35, top: 25 },
-  xAxis: { type: 'category', data: ["1月", "2月", "3月", "4月", "5月", "6月", "7月", "8月"], axisLabel: { fontSize: isMobile() ? 10 : 12 } },
+  xAxis: { type: 'category', data: ["1月", "2月", "3月", "4月", "5月", "6月", "7月", "8月", "9月(2天)"], axisLabel: { fontSize: isMobile() ? 10 : 12 } },
   yAxis: { type: 'value', name: '万元', axisLabel: { formatter: '{value}', fontSize: isMobile() ? 10 : 11 } },
   series: [{
-    name: '月度营收', type: 'bar', data: [680.1, 617.56, 1208.38, 1183.37, 990.87, 1078.7, 1453.63, 1818.87],
+    name: '月度营收', type: 'bar', data: [680.1, 617.56, 1208.38, 1183.37, 990.87, 1078.7, 1453.63, 1818.87, 77.3],
     itemStyle: {
       color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{ offset: 0, color: '#4285f4' }, { offset: 1, color: '#1a73e8' }]),
       borderRadius: [4, 4, 0, 0]
