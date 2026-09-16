@@ -113,17 +113,17 @@ a:hover { text-decoration: underline; }
   </div>
   <div class="kpi-card">
     <div class="label">9月累计</div>
-    <div class="value">598.22<span style="font-size:14px;color:#888">万</span></div>
-    <div class="sub">目标1173万 | 达成 <span class="up">51.0%</span></div>
+    <div class="value">598.05<span style="font-size:14px;color:#888">万</span></div>
+    <div class="sub">目标1173万 | 达成 <span class="up">50.98%</span></div>
   </div>
   <div class="kpi-card">
     <div class="label">时间进度</div>
     <div class="value">43.33<span style="font-size:14px;color:#888">%</span></div>
-    <div class="sub">进度差 <span class="up">+7.67pp ✅ 领先</span></div>
+    <div class="sub">进度差 <span class="up">+7.65pp ✅ 领先</span></div>
   </div>
   <div class="kpi-card">
     <div class="label">日均营收</div>
-    <div class="value">46.02<span style="font-size:14px;color:#888">万</span></div>
+    <div class="value">46.0<span style="font-size:14px;color:#888">万</span></div>
     <div class="sub">目标39.1万</div>
   </div>
 </div>
@@ -163,10 +163,10 @@ a:hover { text-decoration: underline; }
         <tr><th>#</th><th>科室</th><th>当日营收(万)</th><th>当日占比</th><th>累计(万)</th><th>累计占比</th><th>药耗占比</th><th>一句话总结</th></tr>
       </thead>
       <tbody>
-    <tr><td>1</td><td>神经内科</td><td><b>1.35</b></td><td>6.43%</td><td><b>164.0</b></td><td>27.41%</td><td>28.19%</td><td>检查为主(25.45%)</td></tr>
-    <tr><td>2</td><td>神经肿瘤科</td><td><b>0.85</b></td><td>4.05%</td><td><b>96.98</b></td><td>16.21%</td><td>48.98%</td><td>收入结构均衡</td></tr>
+    <tr><td>1</td><td>神经内科</td><td><b>1.35</b></td><td>6.43%</td><td><b>164.0</b></td><td>27.42%</td><td>28.19%</td><td>检查为主(25.45%)</td></tr>
+    <tr><td>2</td><td>神经肿瘤科</td><td><b>0.85</b></td><td>4.05%</td><td><b>96.98</b></td><td>16.22%</td><td>48.98%</td><td>收入结构均衡</td></tr>
     <tr><td>3</td><td>中医康复科</td><td><b>1.57</b></td><td>7.48%</td><td><b>57.31</b></td><td>9.58%</td><td>20.39%</td><td>收入结构均衡</td></tr>
-    <tr><td>4</td><td>健康管理中心</td><td><b>3.8</b></td><td>18.1%</td><td><b>29.6</b></td><td>4.95%</td><td>0.0%</td><td>收入结构均衡</td></tr>
+    <tr><td>4</td><td>健康管理中心</td><td><b>3.8</b></td><td>18.1%</td><td><b>29.42</b></td><td>4.92%</td><td>0.0%</td><td>收入结构均衡</td></tr>
     <tr><td>5</td><td>急诊科</td><td><b>3.0</b></td><td>14.29%</td><td><b>26.03</b></td><td>4.35%</td><td>9.07%</td><td>检查为主(78.61%)</td></tr>
     <tr><td>6</td><td>腋臭项目</td><td><b>0.87</b></td><td>4.14%</td><td><b>23.31</b></td><td>3.9%</td><td>47.23%</td><td><span style='background:#e8f5e9;color:#2e7d32;padding:2px 6px;border-radius:4px;font-size:11px'>治疗收入为主，技术含量高</span></td></tr>
     <tr><td>7</td><td>肾内科</td><td><b>0.27</b></td><td>1.29%</td><td><b>22.65</b></td><td>3.79%</td><td>25.71%</td><td>收入结构均衡</td></tr>
@@ -215,10 +215,10 @@ a:hover { text-decoration: underline; }
   <div class="alert-row">
     
     <div class="alert-item alert-yellow">
-      <b>神经内科</b>：累计营收164.0万，为当月最大贡献科室（占比27.41%）
+      <b>神经内科</b>：累计营收164.0万，为当月最大贡献科室（占比27.42%）
     </div>
     <div class="alert-item alert-green">
-      <b>月度进度</b>：达成进度51.0%超过时间进度43.33%，领先7.67pp ✅
+      <b>月度进度</b>：达成进度50.98%超过时间进度43.33%，领先7.65pp ✅
     </div>
   </div>
 </div>
@@ -239,7 +239,7 @@ trendChart.setOption({
   xAxis: { type: 'category', data: ["9/1", "9/2", "9/3", "9/4", "9/5", "9/6", "9/7", "9/8", "9/9", "9/10", "9/11", "9/12", "9/13"], axisLabel: { fontSize: isMobile() ? 10 : 11 } },
   yAxis: { type: 'value', name: '万元', min: 16, max: 133, axisLabel: { formatter: '{value}', fontSize: isMobile() ? 10 : 11 } },
   series: [
-    { name: '日营收', type: 'line', data: [39.95, 37.35, 39.32, 43.64, 30.46, 22.74, 83.4, 128.97, 34.72, 35.91, 52.6, 28.16, 21.0],
+    { name: '日营收', type: 'line', data: [39.87, 37.35, 39.32, 43.52, 30.46, 22.74, 83.4, 128.97, 34.74, 35.91, 52.6, 28.16, 21.0],
       smooth: true, symbol: 'circle', symbolSize: isMobile() ? 6 : 8,
       lineStyle: { width: 3, color: '#1a73e8' },
       itemStyle: { color: '#1a73e8' },
@@ -249,7 +249,7 @@ trendChart.setOption({
     { name: '目标日均', type: 'line', data: [39.1, 39.1, 39.1, 39.1, 39.1, 39.1, 39.1, 39.1, 39.1, 39.1, 39.1, 39.1, 39.1],
       lineStyle: { width: 2, type: 'dashed', color: '#ea4335' }, itemStyle: { color: '#ea4335' }, symbol: 'none'
     },
-    { name: '均值', type: 'line', data: [39.95, 38.65, 38.87, 40.06, 38.14, 35.58, 42.41, 53.23, 51.17, 49.65, 49.91, 48.1, 46.02],
+    { name: '均值', type: 'line', data: [39.87, 38.61, 38.85, 40.02, 38.11, 35.55, 42.38, 53.21, 51.15, 49.63, 49.9, 48.09, 46.0],
       lineStyle: { width: 1.5, type: 'dotted', color: '#34a853' }, itemStyle: { color: '#34a853' }, symbol: 'none'
     }
   ]
@@ -262,7 +262,7 @@ jianguanChart.setOption({
   xAxis: { type: 'category', data: ["9/1", "9/2", "9/3", "9/4", "9/5", "9/6", "9/7", "9/8", "9/9", "9/10", "9/11", "9/12", "9/13"], axisLabel: { fontSize: isMobile() ? 10 : 11 } },
   yAxis: { type: 'value', name: '万元', axisLabel: { formatter: '{value}', fontSize: isMobile() ? 10 : 11 } },
   series: [
-    { name: '健管', type: 'bar', data: [1.21, 0.68, 0.89, 1.97, 2.44, 0.77, 0.2, 3.06, 3.51, 3.01, 3.55, 4.51, 3.8],
+    { name: '健管', type: 'bar', data: [1.13, 0.68, 0.89, 1.85, 2.44, 0.77, 0.2, 3.06, 3.53, 3.01, 3.55, 4.51, 3.8],
       itemStyle: { color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{ offset: 0, color: '#ce93d8' }, { offset: 1, color: '#9c27b0' }]), borderRadius: [4, 4, 0, 0] },
       barMaxWidth: 30,
       label: { show: !isMobile(), position: 'top', fontSize: 10, color: '#ce93d8', formatter: function(p) { return p.value.toFixed(2); } }
@@ -309,7 +309,7 @@ structChart.setOption({
       { value: 179.27, name: '耗材', itemStyle: { color: '#4285f4' } },
       { value: 55.91, name: '检查', itemStyle: { color: '#34a853' } },
       { value: 92.64, name: '治疗', itemStyle: { color: '#fbbc04' } },
-      { value: 133.11, name: '其他', itemStyle: { color: '#9aa0a6' } }
+      { value: 132.93, name: '其他', itemStyle: { color: '#9aa0a6' } }
     ]
   }]
 });
@@ -327,7 +327,7 @@ progressChart.setOption({
       axisTick: { show: false }, splitLine: { show: false },
       axisLabel: { show: false },
       detail: { show: false },
-      data: [{ value: 51.0 }]
+      data: [{ value: 50.98 }]
     },
     { type: 'gauge', startAngle: 200, endAngle: -20, min: 0, max: 100,
       radius: '90%', center: ['50%', '60%'],
@@ -341,12 +341,12 @@ progressChart.setOption({
       detail: { fontSize: 20, fontWeight: 'bold', offsetCenter: [0, '10%'],
         formatter: function(v) { return ''; }
       },
-      data: [{ value: 51.0 }]
+      data: [{ value: 50.98 }]
     }
   ],
   graphic: [
     { type: 'text', left: 'center', top: '30%',
-      style: { text: '达成 51.0%', fontSize: isMobile() ? 14 : 16, fontWeight: 'bold', fill: '#1a73e8' } },
+      style: { text: '达成 50.98%', fontSize: isMobile() ? 14 : 16, fontWeight: 'bold', fill: '#1a73e8' } },
     { type: 'text', left: 'center', top: '48%',
       style: { text: '时间 43.33%', fontSize: isMobile() ? 11 : 12, fill: '#888' } }
   ]
