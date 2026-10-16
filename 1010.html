@@ -102,7 +102,7 @@ a:hover { text-decoration: underline; }
 
 <div class="nav-row">
   <a href="1009.html" class="nav-link">← 前一天</a>
-  <span class="nav-link disabled">已是最后一天</span>
+  <a href="1011.html" class="nav-link">后一天 →</a>
 </div>
 
 <div class="kpi-row">
@@ -113,7 +113,7 @@ a:hover { text-decoration: underline; }
   </div>
   <div class="kpi-card">
     <div class="label">10月累计</div>
-    <div class="value">309.45<span style="font-size:14px;color:#888">万</span></div>
+    <div class="value">309.36<span style="font-size:14px;color:#888">万</span></div>
     <div class="sub">目标1300万 | 达成 <span class="up">23.8%</span></div>
   </div>
   <div class="kpi-card">
@@ -123,7 +123,7 @@ a:hover { text-decoration: underline; }
   </div>
   <div class="kpi-card">
     <div class="label">日均营收</div>
-    <div class="value">30.95<span style="font-size:14px;color:#888">万</span></div>
+    <div class="value">30.94<span style="font-size:14px;color:#888">万</span></div>
     <div class="sub">目标41.94万</div>
   </div>
 </div>
@@ -138,11 +138,11 @@ a:hover { text-decoration: underline; }
   <div style="display:flex;gap:12px;margin-bottom:10px;flex-wrap:wrap">
     <div style="flex:1;min-width:140px;background:#f0f7ff;border-left:3px solid #1890ff;padding:10px 14px;border-radius:6px">
       <div style="font-size:12px;color:#666">当月累计已完成</div>
-      <div style="font-size:22px;font-weight:700;color:#1890ff">10.37<span style="font-size:13px;color:#888;font-weight:400">&nbsp;万</span></div>
+      <div style="font-size:22px;font-weight:700;color:#1890ff">10.28<span style="font-size:13px;color:#888;font-weight:400">&nbsp;万</span></div>
     </div>
     <div style="flex:1;min-width:140px;background:#f6ffed;border-left:3px solid #52c41a;padding:10px 14px;border-radius:6px">
       <div style="font-size:12px;color:#666">年度累计已完成</div>
-      <div style="font-size:22px;font-weight:700;color:#52c41a">433.14<span style="font-size:13px;color:#888;font-weight:400">&nbsp;万</span></div>
+      <div style="font-size:22px;font-weight:700;color:#52c41a">433.05<span style="font-size:13px;color:#888;font-weight:400">&nbsp;万</span></div>
     </div>
   </div>
   <div id="jianguanChart" class="chart-box" style="height:220px"></div>
@@ -182,7 +182,7 @@ a:hover { text-decoration: underline; }
     <tr><td>7</td><td>肾内科</td><td><b>1.57</b></td><td>4.84%</td><td><b>15.53</b></td><td>5.02%</td><td>25.75%</td><td><span style='background:#e8f5e9;color:#2e7d32;padding:2px 6px;border-radius:4px;font-size:11px'>治疗收入为主，技术含量高</span></td></tr>
     <tr><td>8</td><td>重症医学科</td><td><b>1.22</b></td><td>3.76%</td><td><b>12.91</b></td><td>4.17%</td><td>31.31%</td><td><span style='background:#e8f5e9;color:#2e7d32;padding:2px 6px;border-radius:4px;font-size:11px'>治疗收入为主，技术含量高</span></td></tr>
     <tr><td>9</td><td>中医康复二组</td><td><b>1.63</b></td><td>5.03%</td><td><b>11.98</b></td><td>3.87%</td><td>5.64%</td><td><span style='background:#e8f5e9;color:#2e7d32;padding:2px 6px;border-radius:4px;font-size:11px'>治疗收入为主，技术含量高</span></td></tr>
-    <tr><td>10</td><td>健康管理中心</td><td><b>2.46</b></td><td>7.59%</td><td><b>10.37</b></td><td>3.35%</td><td>0.0%</td><td>收入结构均衡</td></tr>
+    <tr><td>10</td><td>健康管理中心</td><td><b>2.46</b></td><td>7.59%</td><td><b>10.28</b></td><td>3.32%</td><td>0.0%</td><td>收入结构均衡</td></tr>
     <tr><td>11</td><td>骨科</td><td><b>0.45</b></td><td>1.39%</td><td><b>9.43</b></td><td>3.05%</td><td>29.01%</td><td><span style='background:#e8f5e9;color:#2e7d32;padding:2px 6px;border-radius:4px;font-size:11px'>治疗收入为主，技术含量高</span></td></tr>
     <tr><td>12</td><td>医学美容中心</td><td><b>0.11</b></td><td>0.34%</td><td><b>8.14</b></td><td>2.63%</td><td>2.11%</td><td>收入结构均衡</td></tr>
     <tr><td>13</td><td>心内科</td><td><b>0.48</b></td><td>1.48%</td><td><b>7.05</b></td><td>2.28%</td><td>48.82%</td><td>收入结构均衡</td></tr>
@@ -249,7 +249,7 @@ trendChart.setOption({
   xAxis: { type: 'category', data: ["10/1", "10/2", "10/3", "10/4", "10/5", "10/6", "10/7", "10/8", "10/9", "10/10"], axisLabel: { fontSize: isMobile() ? 10 : 11 } },
   yAxis: { type: 'value', name: '万元', min: 14, max: 61, axisLabel: { formatter: '{value}', fontSize: isMobile() ? 10 : 11 } },
   series: [
-    { name: '日营收', type: 'line', data: [39.77, 56.61, 30.35, 24.62, 24.85, 22.71, 19.03, 26.66, 32.44, 32.42],
+    { name: '日营收', type: 'line', data: [39.77, 56.61, 30.35, 24.62, 24.85, 22.71, 19.03, 26.66, 32.35, 32.42],
       smooth: true, symbol: 'circle', symbolSize: isMobile() ? 6 : 8,
       lineStyle: { width: 3, color: '#1a73e8' },
       itemStyle: { color: '#1a73e8' },
@@ -259,7 +259,7 @@ trendChart.setOption({
     { name: '目标日均', type: 'line', data: [41.94, 41.94, 41.94, 41.94, 41.94, 41.94, 41.94, 41.94, 41.94, 41.94],
       lineStyle: { width: 2, type: 'dashed', color: '#ea4335' }, itemStyle: { color: '#ea4335' }, symbol: 'none'
     },
-    { name: '均值', type: 'line', data: [39.77, 48.19, 42.24, 37.84, 35.24, 33.15, 31.13, 30.57, 30.78, 30.94],
+    { name: '均值', type: 'line', data: [39.77, 48.19, 42.24, 37.84, 35.24, 33.15, 31.13, 30.57, 30.77, 30.94],
       lineStyle: { width: 1.5, type: 'dotted', color: '#34a853' }, itemStyle: { color: '#34a853' }, symbol: 'none'
     }
   ]
@@ -272,7 +272,7 @@ jianguanChart.setOption({
   xAxis: { type: 'category', data: ["10/1", "10/2", "10/3", "10/4", "10/5", "10/6", "10/7", "10/8", "10/9", "10/10"], axisLabel: { fontSize: isMobile() ? 10 : 11 } },
   yAxis: { type: 'value', name: '万元', axisLabel: { formatter: '{value}', fontSize: isMobile() ? 10 : 11 } },
   series: [
-    { name: '健管', type: 'bar', data: [2.46, 1.88, 0, 0, 0, 0, 0, 1.69, 1.88, 2.46],
+    { name: '健管', type: 'bar', data: [2.46, 1.88, 0.0, 0.0, 0.0, 0.0, 0.0, 1.69, 1.79, 2.46],
       itemStyle: { color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{ offset: 0, color: '#ce93d8' }, { offset: 1, color: '#9c27b0' }]), borderRadius: [4, 4, 0, 0] },
       barMaxWidth: 30,
       label: { show: !isMobile(), position: 'top', fontSize: 10, color: '#ce93d8', formatter: function(p) { return p.value.toFixed(2); } }
@@ -319,7 +319,7 @@ structChart.setOption({
       { value: 51.82, name: '耗材', itemStyle: { color: '#4285f4' } },
       { value: 34.4, name: '检查', itemStyle: { color: '#34a853' } },
       { value: 55.38, name: '治疗', itemStyle: { color: '#fbbc04' } },
-      { value: 88.92, name: '其他', itemStyle: { color: '#9aa0a6' } }
+      { value: 88.83, name: '其他', itemStyle: { color: '#9aa0a6' } }
     ]
   }]
 });
